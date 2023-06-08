@@ -1,0 +1,30 @@
+Type: Package
+Package: epidatasets
+Title: Epidemiological Data for Delphi Tooling Examples
+Version: 0.0.1
+Authors@R: 
+    person(c("Daniel", "J."), "McDonald", , "daniel@stat.ubc.ca", role = c("cre", "aut"))
+Description: This package contains data sets used to compile vignettes and
+    other documentation in Delphi R Packages. The goal is to avoid calls
+    to the Delphi Epidata API, and deposit some examples here for easy
+    offline use.
+License: MIT + file LICENSE
+Depends:
+    R (>= 2.10)
+Suggests: 
+    covidcast,
+    dplyr,
+    epidatr,
+    epipredict,
+    here,
+    lubridate,
+    magrittr,
+    purrr,
+    readr
+Remotes:
+    cmu-delphi/epidatr,
+    cmu-delphi/epipredict,
+    cmu-delphi/epiprocess
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3

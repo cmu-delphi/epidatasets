@@ -2,9 +2,17 @@ url: https://cmu-delphi.github.io/epipredict/
 template:
   bootstrap: 5
   bootswatch: cosmo
+  bslib:
+    font_scale: 1.0
+    primary: "#C41230"    # dark blue active text
+    link-color: "#C41230" # brighter link color, contrast 4.52
+    # navbar
+    navbar-bg: "#C41230"  # match to site bg
+    navbar-fg: "#f8f8f8"
 
 navbar:
-  bg: dark
+  bg: "#C41230"
+  fg: "#f8f8f8"
 
 home:
   links:

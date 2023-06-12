@@ -82,8 +82,8 @@ cases_deaths_subset |>
   tidyr::pivot_longer(case_rate_7d_av:death_rate_7d_av) |>
   ggplot(aes(time_value, value, colour = geo_value)) +
   geom_line() +
-  scale_x_date(name = "") +
-  scale_y_continuous(expand = expansion(c(0, 0.05))) +
+  scale_x_date(name = "", date_labels = "%b %Y") +
+  scale_y_continuous(name = "", expand = expansion(c(0, 0.05))) +
   facet_wrap(~ name, scales = "free_y", nrow = 2, 
              labeller = labeller(name = lab)) +
   theme_bw() +

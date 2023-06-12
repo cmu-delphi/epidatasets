@@ -1,19 +1,16 @@
-url: https://cmu-delphi.github.io/epipredict/
+url: https://cmu-delphi.github.io/epidatasets/
 template:
   bootstrap: 5
   bootswatch: cosmo
   bslib:
     font_scale: 1.0
-    primary: "#C41230"    # dark blue active text
-    link-color: "#C41230" # brighter link color, contrast 4.52
-    # navbar
-    navbar-bg: "#C41230"  # match to site bg
-    navbar-fg: "#f8f8f8"
-
+    primary: '#C41230'
+    link-color: '#C41230'
+    navbar-bg: '#C41230'
+    navbar-fg: '#f8f8f8'
 navbar:
-  bg: "#C41230"
-  fg: "#f8f8f8"
-
+  bg: '#C41230'
+  fg: '#f8f8f8'
 home:
   links:
   - text: The epiprocess R package
@@ -22,3 +19,4 @@ home:
     href: https://cmu-delphi.github.io/covidcast/covidcastR/
   - text: The epidatr R package
     href: https://github.com/cmu-delphi/epidatr/
+

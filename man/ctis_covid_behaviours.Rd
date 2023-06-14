@@ -7,6 +7,26 @@
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
 }
+\source{
+Data from Delphi COVIDcast. Obtained via the Delphi Epidata API.
+\url{https://cmu-delphi.github.io/delphi-epidata/api/covidcast.html}. This
+object contains a modified part of the
+\href{https://cmu-delphi.github.io/delphi-epidata/symptom-survey/#covid-19-trends-and-impact-survey}{data
+aggregations in the API} that are prepared from the
+\href{https://www.pnas.org/doi/full/10.1073/pnas.2111454118}{COVID-19
+Trends and Impact Survey}; see the first link for more information on
+citing in publications. These aggregations are licensed under the terms of
+the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+Attribution license}.
+
+Modifications:
+\itemize{
+\item Selected a small subset of the available data.
+\item Changed to wide format.
+}
+
+Delphi Group at Carnegie Mellon University
+}
 \usage{
 ctis_covid_behaviours
 }

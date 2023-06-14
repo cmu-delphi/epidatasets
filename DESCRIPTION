@@ -8,7 +8,7 @@ Description: This package contains data sets used to compile vignettes and
     other documentation in Delphi R Packages. The goal is to avoid calls
     to the Delphi Epidata API, and deposit some examples here for easy
     offline use.
-License: MIT + file LICENSE
+License: file LICENSE
 Depends:
     R (>= 2.10)
 Suggests: 

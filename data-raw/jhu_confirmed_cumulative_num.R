@@ -1,4 +1,5 @@
-## code to prepare `jhu_confirmed_cumulative_num` dataset goes here
+library(dplyr)
+library(epidatr)
 
 jhu_confirmed_cumulative_num <- covidcast(
   data_source = "jhu-csse",

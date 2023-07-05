@@ -1,5 +1,9 @@
 ## code to prepare `ctis_covid_behaviours` dataset goes here
 
+library(dplyr)
+library(epidatr)
+library(covidcast)
+
 behav_ind_mask <- covidcast(
   data_source = "fb-survey",
   signals = "smoothed_wwearing_mask_7d",
@@ -20,7 +24,7 @@ behav_ind_distancing <- covidcast(
   fetch() %>%
   select(geo_value, time_value, distancing = value)
 
-pop_dat <- state_census %>% select(abbr, pop)
+pop_dat <- state_census %>% select(abbr = ABBR, pop = POPESTIMATE2019)
 
 ctis_covid_behaviours <- behav_ind_mask %>%
   full_join(behav_ind_distancing, by = c("geo_value", "time_value"))

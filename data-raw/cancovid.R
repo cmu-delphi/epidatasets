@@ -1,5 +1,10 @@
 ## code to prepare `cancovid` dataset goes here
 
+library(dplyr)
+library(epiprocess)
+library(readr)
+library(purrr)
+
 path_to_csvs <- here::here("../../COVID-BC/Covid19Canada/updates.nosync/")
 files <- list.files(path_to_csvs)
 ca_as_ofs <- as.Date(substr(files, 1, 10)) %>%

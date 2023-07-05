@@ -1,5 +1,9 @@
 ## code to prepare jhu_incidence_num dataset goes here
 
+library(dplyr)
+library(epidatr)
+library(epiprocess)
+
 x <- covidcast(
   data_source = "jhu-csse",
   signals = "confirmed_incidence_num",

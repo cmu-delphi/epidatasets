@@ -1,3 +1,7 @@
+library(dplyr)
+library(epidatr)
+library(epiprocess)
+
 dv_subset <- covidcast(
   data_source = "doctor-visits",
   signals = "smoothed_adj_cli",

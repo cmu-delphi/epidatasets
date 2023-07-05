@@ -1,4 +1,8 @@
-incidence_num_outlier_example <- covidcast(
+library(dplyr)
+library(epidatr)
+library(epiprocess)
+
+covid_incidence_outliers <- covidcast(
   data_source = "jhu-csse",
   signals = "confirmed_incidence_num",
   time_type = "day",

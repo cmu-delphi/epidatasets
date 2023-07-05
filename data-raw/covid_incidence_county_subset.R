@@ -1,4 +1,9 @@
 # Use covidcast::county_census to get the county and state names
+library(dplyr)
+library(covidcast)
+library(epidatr)
+library(epiprocess)
+
 y <- covidcast::county_census %>%
   filter(STNAME %in% c("Massachusetts", "Vermont"), STNAME != CTYNAME) %>%
   select(geo_value = FIPS, county_name = CTYNAME, state_name = STNAME)

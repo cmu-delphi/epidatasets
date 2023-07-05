@@ -1,3 +1,7 @@
+library(dplyr)
+library(epidatr)
+library(epiprocess)
+
 confirmed_7dav_incidence_prop <- covidcast(
   data_source = "jhu-csse",
   signals = "confirmed_7dav_incidence_prop",

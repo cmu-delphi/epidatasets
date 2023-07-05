@@ -24,8 +24,8 @@ y <- covidcast(
   fetch() %>%
   select(geo_value, time_value, death_rate = value)
 
-case_death_rate_subset <- x %>%
+covid_case_death_rates <- x %>%
   full_join(y, by = c("geo_value", "time_value")) %>%
   as_epi_df()
 
-usethis::use_data(case_death_rate_subset, overwrite = TRUE)
+usethis::use_data(covid_case_death_rates, overwrite = TRUE)

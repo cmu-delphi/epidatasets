@@ -3,7 +3,7 @@
 \docType{data}
 \name{covid_incidence_county_subset}
 \alias{covid_incidence_county_subset}
-\title{Subset of JHU daily cases from counties in Massachusetts and Vermont}
+\title{Subset of JHU daily COVID-19 cases from counties in Massachusetts and Vermont}
 \format{
 A tibble with 16,212 rows and 5 variables:
 \describe{

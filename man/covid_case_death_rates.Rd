@@ -3,7 +3,7 @@
 \docType{data}
 \name{covid_case_death_rates}
 \alias{covid_case_death_rates}
-\title{Subset of JHU daily state cases and deaths}
+\title{JHU daily COVID-19 cases and deaths from all states}
 \format{
 A tibble with 20,496 rows and 4 variables:
 \describe{

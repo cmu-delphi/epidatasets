@@ -3,9 +3,16 @@
 \docType{data}
 \name{ctis_covid_behaviours}
 \alias{ctis_covid_behaviours}
-\title{CTIS COVID Behaviours}
+\title{Subset of CTIS COVID-19 behaviours from 5 states}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
+A tibble with 1,055 rows and 4 variables:
+\describe{
+\item{geo_value}{the geographic value associated with each row
+of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{masking}{Estimated percentage of people who wore a mask for most or all of the time while in public in the past 7 days; those not in public in the past 7 days are not counted.}
+\item{distancting}{Estimated percentage of respondents who reported that all or most people they enountered in public in the past 7 days maintained a distance of at least 6 feet. Respondents who said that they have not been in public for the past 7 days are excluded.}
+}
 }
 \source{
 Data from Delphi COVIDcast. Obtained via the Delphi Epidata API.
@@ -33,7 +40,7 @@ ctis_covid_behaviours
 \description{
 Data set for a handful of states on masking and distancing behaviours
 during the COVID-19 Pandemic and downloaded from the CMU Delphi COVIDcast
-Epidata API. This data set covers the period from
-June to December 2021.
+Epidata API. This data set covers the period from June to December 2021,
+and is limited to California, Florida, Texas, New Jersey, and New York.
 }
 \keyword{datasets}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{archive_cases_dv_subset_dt}
 \alias{archive_cases_dv_subset_dt}
-\title{Subset of daily doctor visits and cases in archive format}
+\title{Subset of daily COVID-19 doctor visits and cases from 6 states in archive format}
 \format{
 An \code{epi_archive$DT} data format. The data table DT has 129,638 rows and 5 columns:
 \describe{

@@ -1,4 +1,4 @@
-#' Subset of JHU daily state cases and deaths
+#' JHU daily COVID-19 cases and deaths from all states
 #'
 #' This data source of confirmed COVID-19 cases and deaths
 #' is based on reports made available by the Center for
@@ -59,12 +59,21 @@
 
 # Epipredict Vignette Data ----------------------------------------------------
 
-#' CTIS COVID Behaviours
+#' Subset of CTIS COVID-19 behaviours from 5 states
 #'
 #' Data set for a handful of states on masking and distancing behaviours
 #' during the COVID-19 Pandemic and downloaded from the CMU Delphi COVIDcast
-#' Epidata API. This data set covers the period from
-#' June to December 2021.
+#' Epidata API. This data set covers the period from June to December 2021,
+#' and is limited to California, Florida, Texas, New Jersey, and New York.
+#'
+#' @format A tibble with 1,055 rows and 4 variables:
+#' \describe{
+#'   \item{geo_value}{the geographic value associated with each row
+#'       of measurements.}
+#'   \item{time_value}{the time value associated with each row of measurements.}
+#'   \item{masking}{Estimated percentage of people who wore a mask for most or all of the time while in public in the past 7 days; those not in public in the past 7 days are not counted.}
+#'   \item{distancting}{Estimated percentage of respondents who reported that all or most people they enountered in public in the past 7 days maintained a distance of at least 6 feet. Respondents who said that they have not been in public for the past 7 days are excluded.}
+#' }
 #'
 #' @source Data from Delphi COVIDcast. Obtained via the Delphi Epidata API.
 #'   \url{https://cmu-delphi.github.io/delphi-epidata/api/covidcast.html}. This
@@ -84,13 +93,21 @@
 #' Delphi Group at Carnegie Mellon University
 "ctis_covid_behaviours"
 
-#' COVID-19 Incident Cases and Deaths
+#' Subset of COVID-19 incident cases and deaths from 5 states
 #'
 #' Data set for 5 states containing COVID-19 Incident Cases and Deaths as
-#' reported
-#' by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API.
-#' This data set covers the period from June 2021 to December 2021, and is
-#' used in the [epipredict] Vignette on ... .
+#' reported by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata
+#' API. This data set covers the period from June 2021 to December 2021, and
+#' is limited to California, Florida, Texas, New Jersey, and New York.
+#'
+#' @format A tibble with 1,055 rows and 4 variables:
+#' \describe{
+#'   \item{geo_value}{the geographic value associated with each row
+#'       of measurements.}
+#'   \item{time_value}{the time value associated with each row of measurements.}
+#'   \item{cases}{Number of new confirmed COVID-19 cases, daily}
+#'   \item{deaths}{Number of new confirmed COVID-19 deaths, daily}
+#' }
 #'
 #' @source This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}

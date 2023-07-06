@@ -3,7 +3,7 @@
 \docType{data}
 \name{cases_deaths_subset}
 \alias{cases_deaths_subset}
-\title{Subset of JHU daily state cases and deaths}
+\title{Subset of JHU daily state COVID-19 cases and deaths from 4 states}
 \format{
 A tibble with 4026 rows and 6 variables:
 \describe{

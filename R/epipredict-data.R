@@ -1,10 +1,10 @@
 #' JHU daily COVID-19 cases and deaths from all states
 #'
-#' This data source of confirmed COVID-19 cases and deaths
-#' is based on reports made available by the Center for
-#' Systems Science and Engineering at Johns Hopkins University.
-#' This example data ranges from Dec 31, 2020 to Dec 31, 2021,
-#' and includes all states.
+#' This data source of confirmed COVID-19 cases and deaths is based on reports
+#' made available by the Center for Systems Science and Engineering at Johns
+#' Hopkins University, as downloaded from the CMU Delphi COVIDcast Epidata
+#' API. This example data ranges from Dec 31, 2020 to Dec 31, 2021, and
+#' includes all states.
 #'
 #' @format A tibble with 20,496 rows and 4 variables:
 #' \describe{
@@ -51,10 +51,11 @@
 #'   \item{abbr}{Postal abbreviation for the location}
 #' }
 #'
-#' @source United States Census Bureau, at
+#' @source United States Census Bureau, Population Division, at
 #'   \url{https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf},
 #'   \url{https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html},
 #'   and \url{https://www.census.gov/data/tables/2010/dec/2010-island-areas.html}
+#'   This data is public domain.
 "state_census"
 
 # Epipredict Vignette Data ----------------------------------------------------
@@ -62,7 +63,7 @@
 #' Subset of CTIS COVID-19 behaviours from 5 states
 #'
 #' Data set for a handful of states on masking and distancing behaviours
-#' during the COVID-19 Pandemic and downloaded from the CMU Delphi COVIDcast
+#' during the COVID-19 Pandemic, and downloaded from the CMU Delphi COVIDcast
 #' Epidata API. This data set covers the period from June to December 2021,
 #' and is limited to California, Florida, Texas, New Jersey, and New York.
 #'
@@ -109,7 +110,9 @@
 #'   \item{deaths}{Number of new confirmed COVID-19 deaths, daily}
 #' }
 #'
-#' @source This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+#' @source This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University}
+#' as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}.
+#' This data set is licensed under the terms of the
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
 #' by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
 #' Copyright Johns Hopkins University 2020.

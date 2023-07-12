@@ -6,7 +6,9 @@
 #' This example data ranges from Mar 1, 2020 to Dec 31, 2021, and is limited to
 #' California, Florida, Texas, New York, Georgia, and Pennsylvania.
 #'
-#' @format A tibble with 4,026 rows and 6 variables:
+#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4026 rows and 6 columns.
+#' @section Data dictionary:
+#' A tibble with columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}
@@ -37,7 +39,6 @@
 #'   inclusive.
 #' * Furthermore, the data has been limited to a very small number of rows,
 #'   formatted into a tibble, and the signal names slightly altered.
-# Named "jhu_csse_daily_subset" in {epiprocess}
 "cases_deaths_subset"
 
 #' Subset of daily COVID-19 doctor visits and cases from 6 states in archive format
@@ -49,7 +50,9 @@
 #' This example data ranges from June 1, 2020 to Dec 1, 2021, and
 #' is also limited to California, Florida, Texas, and New York.
 #'
-#' @format An `epi_archive$DT` data format. The data table DT has 129,638 rows and 5 columns:
+#' @format An object of class \code{data.table} (inherits from \code{data.frame}) with 129638 rows and 5 columns.
+#' @section Data dictionary:
+#' An `epi_archive$DT` data format with columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{time_value}{the time value associated with each row of measurements.}
@@ -68,7 +71,6 @@
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: `case_rate_7d_av` signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
 #' * Furthermore, the data has been limited to a very small number of rows,
 #'   formatted into a tibble, and the signal names slightly altered.
-# This is named "archive_cases_dv_subset" in {epiprocess}
 "archive_cases_dv_subset_dt"
 
 #' Subset of JHU daily COVID-19 cases from counties in Massachusetts and Vermont
@@ -79,7 +81,9 @@
 #' This example data ranges from Mar 1, 2020 to Dec 31, 2021,
 #' and is limited to Massachusetts and Vermont.
 #'
-#' @format A tibble with 16,212 rows and 5 variables:
+#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 16212 rows and 5 columns.
+#' @section Data dictionary:
+#' A tibble with columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{time_value}{the time value associated with each row of measurements.}
@@ -96,7 +100,6 @@
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes. The 7-day average signals are computed by Delphi by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
 #' * Furthermore, the data has been limited to a very small number of rows,
 #'   formatted into a tibble, and the signal names slightly altered.
-# This is named "jhu_csse_county_level_subset" in {epiprocess}
 "covid_incidence_county_subset"
 
 # Epiprocess Vignette Data ----------------------------------------------------
@@ -110,7 +113,9 @@
 #' cases from June 1, 2020 to May 31, 2021 and is limited to California and
 #' Florida. This data set is used in the {epiprocess} vignette on outliers.
 #'
-#' @format A tibble with 730 rows and 3 variables:
+#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 730 rows and 3 columns.
+#' @section Data dictionary:
+#' A tibble with columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{time_value}{the time value associated with each row of measurements.}
@@ -136,7 +141,9 @@
 #' to California, Florida, New York, and Texas. It is used in the
 #' {epiprocess} "Getting Started" vignette.
 #'
-#' @format A tibble with 2,808 rows and 15 variables:
+#' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2808 rows and 15 columns.
+#' @section Data dictionary:
+#' A tibble with 2,808 rows and 15 variables:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{signal}{name of metric, derived from upstream data.}

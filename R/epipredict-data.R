@@ -6,7 +6,9 @@
 #' API. This example data ranges from Dec 31, 2020 to Dec 31, 2021, and
 #' includes all states.
 #'
-#' @format A tibble with 20,496 rows and 4 variables:
+#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 37576 rows and 4 columns.
+#' @section Data dictionary:
+#' A tibble with columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}
@@ -38,10 +40,12 @@
 #'
 #' Data set on state populations, from the 2019 US Census.
 #'
-#' @format Data frame with 57 rows (including one for the United States as a
-#'   whole, plus the District of Columbia, Puerto Rico Commonwealth,
-#'   American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana,
-#'   Islands).
+#' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 57 rows and 4 columns.
+#' @section Data dictionary:
+#' A data frame containing data for 57 regions, including all states, the United
+#'   States as a whole, the District of Columbia, Puerto Rico Commonwealth,
+#'   American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana
+#'   Islands, with columns:
 #'
 #' \describe{
 #'   \item{fips}{FIPS code}
@@ -67,7 +71,9 @@
 #' Epidata API. This data set covers the period from June to December 2021,
 #' and is limited to California, Florida, Texas, New Jersey, and New York.
 #'
-#' @format A tibble with 1,055 rows and 4 variables:
+#' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
+#' @section Data dictionary:
+#' A tibble with columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}
@@ -101,7 +107,9 @@
 #' API. This data set covers the period from June 2021 to December 2021, and
 #' is limited to California, Florida, Texas, New Jersey, and New York.
 #'
-#' @format A tibble with 1,055 rows and 4 variables:
+#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
+#' @section Data dictionary:
+#' A tibble with columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}

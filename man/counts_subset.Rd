@@ -5,17 +5,12 @@
 \alias{counts_subset}
 \title{Subset of COVID-19 incident cases and deaths from 5 states}
 \format{
-A tibble with 1,055 rows and 4 variables:
-\describe{
-\item{geo_value}{the geographic value associated with each row
-of measurements.}
-\item{time_value}{the time value associated with each row of measurements.}
-\item{cases}{Number of new confirmed COVID-19 cases, daily}
-\item{deaths}{Number of new confirmed COVID-19 deaths, daily}
-}
+An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
 }
 \source{
-This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University}
+as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}.
+This data set is licensed under the terms of the
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
 by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
 Copyright Johns Hopkins University 2020.
@@ -29,4 +24,16 @@ reported by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata
 API. This data set covers the period from June 2021 to December 2021, and
 is limited to California, Florida, Texas, New Jersey, and New York.
 }
+\section{Data dictionary}{
+
+A tibble with columns:
+\describe{
+\item{geo_value}{the geographic value associated with each row
+of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{cases}{Number of new confirmed COVID-19 cases, daily}
+\item{deaths}{Number of new confirmed COVID-19 deaths, daily}
+}
+}
+
 \keyword{datasets}

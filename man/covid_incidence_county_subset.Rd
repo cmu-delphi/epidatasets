@@ -5,14 +5,7 @@
 \alias{covid_incidence_county_subset}
 \title{Subset of JHU daily COVID-19 cases from counties in Massachusetts and Vermont}
 \format{
-A tibble with 16,212 rows and 5 variables:
-\describe{
-\item{geo_value}{the geographic value associated with each row of measurements.}
-\item{time_value}{the time value associated with each row of measurements.}
-\item{cases}{Number of new confirmed COVID-19 cases, daily}
-\item{county_name}{the name of the county}
-\item{state_name}{the full name of the state}
-}
+An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 16212 rows and 5 columns.
 }
 \source{
 This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
@@ -23,7 +16,8 @@ Copyright Johns Hopkins University 2020.
 Modifications:
 \itemize{
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes. The 7-day average signals are computed by Delphi by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
-\item Furthermore, the data has been limited to a very small number of rows, the signal names slightly altered, and formatted into a tibble.
+\item Furthermore, the data has been limited to a very small number of rows,
+formatted into a tibble, and the signal names slightly altered.
 }
 }
 \usage{
@@ -36,4 +30,16 @@ Systems Science and Engineering at Johns Hopkins University.
 This example data ranges from Mar 1, 2020 to Dec 31, 2021,
 and is limited to Massachusetts and Vermont.
 }
+\section{Data dictionary}{
+
+A tibble with columns:
+\describe{
+\item{geo_value}{the geographic value associated with each row of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{cases}{Number of new confirmed COVID-19 cases, daily}
+\item{county_name}{the name of the county}
+\item{state_name}{the full name of the state}
+}
+}
+
 \keyword{datasets}

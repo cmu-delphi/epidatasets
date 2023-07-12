@@ -5,14 +5,7 @@
 \alias{archive_cases_dv_subset_dt}
 \title{Subset of daily COVID-19 doctor visits and cases from 6 states in archive format}
 \format{
-An \code{epi_archive$DT} data format. The data table DT has 129,638 rows and 5 columns:
-\describe{
-\item{geo_value}{the geographic value associated with each row of measurements.}
-\item{time_value}{the time value associated with each row of measurements.}
-\item{version}{the time value specifying the version for each row of measurements. }
-\item{percent_cli}{percentage of doctor’s visits with CLI (COVID-like illness) computed from medical insurance claims}
-\item{case_rate_7d_av}{7-day average signal of number of new confirmed deaths due to COVID-19 per 100,000 population, daily}
-}
+An object of class \code{data.table} (inherits from \code{data.frame}) with 129638 rows and 5 columns.
 }
 \source{
 This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
@@ -24,7 +17,8 @@ Modifications:
 \itemize{
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits API}: The signal \code{percent_cli} is taken directly from the API without changes.
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: \code{case_rate_7d_av} signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
-\item Furthermore, the data is a subset of the full dataset, the signal names slightly altered, and formatted into a tibble.
+\item Furthermore, the data has been limited to a very small number of rows,
+formatted into a tibble, and the signal names slightly altered.
 }
 }
 \usage{
@@ -38,4 +32,16 @@ Systems Science and Engineering at Johns Hopkins University.
 This example data ranges from June 1, 2020 to Dec 1, 2021, and
 is also limited to California, Florida, Texas, and New York.
 }
+\section{Data dictionary}{
+
+An \code{epi_archive$DT} data format with columns:
+\describe{
+\item{geo_value}{the geographic value associated with each row of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{version}{the time value specifying the version for each row of measurements. }
+\item{percent_cli}{percentage of doctor’s visits with CLI (COVID-like illness) computed from medical insurance claims}
+\item{case_rate_7d_av}{7-day average signal of number of new confirmed deaths due to COVID-19 per 100,000 population, daily}
+}
+}
+
 \keyword{datasets}

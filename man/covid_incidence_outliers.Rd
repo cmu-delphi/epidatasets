@@ -5,12 +5,7 @@
 \alias{covid_incidence_outliers}
 \title{Subset of JHU daily COVID-19 cases from California and Florida}
 \format{
-A tibble with 730 rows and 3 variables:
-\describe{
-\item{geo_value}{the geographic value associated with each row of measurements.}
-\item{time_value}{the time value associated with each row of measurements.}
-\item{cases}{Number of new confirmed COVID-19 cases, daily}
-}
+An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 730 rows and 3 columns.
 }
 \source{
 This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
@@ -22,7 +17,8 @@ Modifications:
 \itemize{
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
 These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes.
-\item Furthermore, the data has been limited to a very small number of rows, the signal names slightly altered, and formatted into a tibble.
+\item Furthermore, the data has been limited to a very small number of rows,
+formatted into a tibble, and the signal names slightly altered.
 }
 }
 \usage{
@@ -36,4 +32,14 @@ COVIDcast Epidata API. It is a snapshot as of Oct 28, 2021 and captures the
 cases from June 1, 2020 to May 31, 2021 and is limited to California and
 Florida. This data set is used in the {epiprocess} vignette on outliers.
 }
+\section{Data dictionary}{
+
+A tibble with columns:
+\describe{
+\item{geo_value}{the geographic value associated with each row of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{cases}{Number of new confirmed COVID-19 cases, daily}
+}
+}
+
 \keyword{datasets}

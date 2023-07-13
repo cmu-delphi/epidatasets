@@ -6,6 +6,8 @@
 #' This example data ranges from Mar 1, 2020 to Dec 31, 2021, and is limited to
 #' California, Florida, Texas, New York, Georgia, and Pennsylvania.
 #'
+#' It is used in the {epiprocess} growth rate and `epi_slide` vignettes.
+#'
 #' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4026 rows and 6 columns.
 #' @section Data dictionary:
 #' A tibble with columns:
@@ -50,6 +52,9 @@
 #' This example data ranges from June 1, 2020 to Dec 1, 2021, and
 #' is also limited to California, Florida, Texas, and New York.
 #'
+#' It is used in the {epiprocess} `compactify`, `epix_archive`, and
+#' advanced-use vignettes.
+#'
 #' @format An object of class \code{data.table} (inherits from \code{data.frame}) with 129638 rows and 5 columns.
 #' @section Data dictionary:
 #' An `epi_archive$DT` data format with columns:
@@ -80,6 +85,8 @@
 #' Systems Science and Engineering at Johns Hopkins University.
 #' This example data ranges from Mar 1, 2020 to Dec 31, 2021,
 #' and is limited to Massachusetts and Vermont.
+#'
+#' It is used in the {epiprocess} aggregation vignette.
 #'
 #' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 16212 rows and 5 columns.
 #' @section Data dictionary:
@@ -138,8 +145,9 @@
 #' Data set for 4 states containing COVID-19 Cumulative Cases as reported by
 #' JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API. This
 #' data set covers the period from March 2020 to January 2022, and is limited
-#' to California, Florida, New York, and Texas. It is used in the
-#' {epiprocess} "Getting Started" vignette.
+#' to California, Florida, New York, and Texas.
+#'
+#' It is used in the {epiprocess} "Getting Started" vignette.
 #'
 #' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2808 rows and 15 columns.
 #' @section Data dictionary:

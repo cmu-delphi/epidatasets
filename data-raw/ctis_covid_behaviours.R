@@ -2,7 +2,6 @@
 
 library(dplyr)
 library(epidatr)
-library(covidcast)
 
 behav_ind_mask <- covidcast(
   data_source = "fb-survey",
@@ -23,8 +22,6 @@ behav_ind_distancing <- covidcast(
   geo_values = "ca,fl,tx,ny,nj")  %>%
   fetch() %>%
   select(geo_value, time_value, distancing = value)
-
-pop_dat <- state_census %>% select(abbr = ABBR, pop = POPESTIMATE2019)
 
 ctis_covid_behaviours <- behav_ind_mask %>%
   full_join(behav_ind_distancing, by = c("geo_value", "time_value"))

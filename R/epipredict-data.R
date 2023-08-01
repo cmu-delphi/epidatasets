@@ -80,3 +80,10 @@
 #' by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
 #' Copyright Johns Hopkins University 2020.
 "counts_subset"
+
+#' COVID Cases for Canada 
+#'
+#' This dataset covers the period from March 2020 to March 2023 and is
+#' used in the [epipredict] slide vignette.
+"cancovid"
+

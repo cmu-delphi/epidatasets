@@ -96,8 +96,6 @@
 #' Modifications:
 #' * Selected a small subset of the available data.
 #' * Changed to wide format.
-#'
-#' Delphi Group at Carnegie Mellon University
 "ctis_covid_behaviours"
 
 #' Subset of COVID-19 incident cases and deaths from 5 states

@@ -24,8 +24,6 @@ Modifications:
 \item Selected a small subset of the available data.
 \item Changed to wide format.
 }
-
-Delphi Group at Carnegie Mellon University
 }
 \usage{
 ctis_covid_behaviours

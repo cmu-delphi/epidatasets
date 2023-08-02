@@ -83,7 +83,7 @@
 
 #' COVID Cases for Canada 
 #'
-#' This dataset covers the period from March 2020 to March 2023 and is
+#' THIS IS A STUB This dataset covers the period from March 2020 to March 2023 and is
 #' used in the [epipredict] slide vignette.
 "cancovid"
 

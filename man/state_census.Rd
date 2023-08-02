@@ -5,10 +5,27 @@
 \alias{state_census}
 \title{State population data}
 \format{
-Data frame with 57 rows (including one for the United States as a
-whole, plus the District of Columbia, Puerto Rico Commonwealth,
-American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana,
-Islands).
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 57 rows and 4 columns.
+}
+\source{
+United States Census Bureau, Population Division, at
+\url{https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf},
+\url{https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html},
+and \url{https://www.census.gov/data/tables/2010/dec/2010-island-areas.html}
+This data is public domain.
+}
+\usage{
+state_census
+}
+\description{
+Data set on state populations, from the 2019 US Census.
+}
+\section{Data dictionary}{
+
+A data frame containing data for 57 regions, including all states, the United
+States as a whole, the District of Columbia, Puerto Rico Commonwealth,
+American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana
+Islands, with columns:
 
 \describe{
 \item{fips}{FIPS code}
@@ -18,16 +35,5 @@ Islands).
 \item{abbr}{Postal abbreviation for the location}
 }
 }
-\source{
-United States Census Bureau, at
-\url{https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf},
-\url{https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html},
-and \url{https://www.census.gov/data/tables/2010/dec/2010-island-areas.html}
-}
-\usage{
-state_census
-}
-\description{
-Data set on state populations, from the 2019 US Census.
-}
+
 \keyword{datasets}

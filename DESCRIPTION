@@ -15,7 +15,6 @@ Suggests:
     covidcast,
     dplyr,
     epidatr,
-    epipredict,
     epiprocess,
     here,
     lubridate,
@@ -24,7 +23,6 @@ Suggests:
     readr
 Remotes:
     cmu-delphi/epidatr,
-    cmu-delphi/epipredict,
     cmu-delphi/epiprocess
 Encoding: UTF-8
 LazyData: true

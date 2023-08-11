@@ -31,6 +31,7 @@ if (gh_token == "") {
 
 ## Get list of new and modified files to download
 # The `path` field filters commits to only those that modifying the listed dir
+# From https://www.github.com/ccodwg/Covid19Canada
 BASE_URL <- "https://api.github.com/repos/ccodwg/Covid19Canada/commits?sha=%s&per_page=%s&path=timeseries_prov/cases_timeseries_prov.csv&until=%s&page=%s"
 ITEMS_PER_PAGE <- 100
 BRANCH <- "master"

@@ -3,15 +3,31 @@
 \docType{data}
 \name{can_prov_cases}
 \alias{can_prov_cases}
-\title{COVID Cases for Canada}
+\title{Canadian COVID-19 case rates}
 \format{
 An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 65299 rows and 4 columns.
+}
+\source{
+This object contains a modified part of the COVID-19 Canada Open
+Data Working Group's
+\href{https://github.com/ccodwg/Covid19Canada}{Covid19Canada data repository}.
+This data set is licensed under the terms of the
+\href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+by the COVID-19 Canada Open Data Working Group.
 }
 \usage{
 can_prov_cases
 }
 \description{
-THIS IS A STUB This dataset covers the period from March 2020 to March 2023 and is
-used in the [epipredict] slide vignette.
+Data set for all Canadian provinces and territories containing COVID-19
+case rates (COVID-19 cases per 100,000 people) derived from COVID-19 case
+counts as reported by the
+\href{https://opencovid.ca/}{COVID-19 Canada Open Data Working Group (CCODWG)}.
+Data is available throught the associated ccodwg/Covid19Canada GitHub
+repository.
+}
+\details{
+This dataset contains versioned data covering the period from April 2020 to
+December 2021 and is used in the [epipredict] slide vignette.
 }
 \keyword{datasets}

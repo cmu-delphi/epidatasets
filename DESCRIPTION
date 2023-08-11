@@ -17,6 +17,8 @@ Suggests:
     epidatr,
     epiprocess,
     here,
+    httr,
+    jsonlite,
     lubridate,
     magrittr,
     purrr,

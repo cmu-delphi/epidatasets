@@ -1,4 +1,4 @@
-## code to prepare `cancovid` dataset goes here
+## code to prepare `can_prov_cases` dataset goes here
 
 library(dplyr)
 library(epiprocess)
@@ -107,7 +107,7 @@ ca_pop <- read_csv(
 abbrev_map <- setNames(ca_pop$province, ca_pop$abbreviation)
 
 # Read in data and convert to `epi_df`s.
-cancovid <- purrr::map2(commit_pages$data_url, commit_pages$date, function(url, date) {
+can_prov_cases <- purrr::map2(commit_pages$data_url, commit_pages$date, function(url, date) {
   raw <- readr::read_csv(
     url,
     col_types = cols(
@@ -139,9 +139,9 @@ cancovid <- purrr::map2(commit_pages$data_url, commit_pages$date, function(url, 
   
   return(result)
 })
-names(cancovid) <- commit_pages$date
-cancovid <- cancovid %>% bind_rows(.id = "version") %>%
+names(can_prov_cases) <- commit_pages$date
+can_prov_cases <- can_prov_cases %>% bind_rows(.id = "version") %>%
   mutate(version = lubridate::ymd(version)) %>% 
   arrange(version)
 
-usethis::use_data(cancovid, overwrite = TRUE)
+usethis::use_data(can_prov_cases, overwrite = TRUE)

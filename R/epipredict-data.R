@@ -85,5 +85,4 @@
 #'
 #' THIS IS A STUB This dataset covers the period from March 2020 to March 2023 and is
 #' used in the [epipredict] slide vignette.
-"cancovid"
-
+"can_prov_cases"

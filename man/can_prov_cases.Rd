@@ -10,7 +10,7 @@ An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code
 \source{
 This object contains a modified part of the COVID-19 Canada Open
 Data Working Group's
-\href{https://github.com/ccodwg/Covid19Canada}{Covid19Canada data repository}.
+\href{https://github.com/ccodwg/Covid19Canada}{Covid19Canada data repository} (archived).
 This data set is licensed under the terms of the
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
 by the COVID-19 Canada Open Data Working Group.
@@ -23,8 +23,11 @@ Data set for all Canadian provinces and territories containing COVID-19
 case rates (COVID-19 cases per 100,000 people) derived from COVID-19 case
 counts as reported by the
 \href{https://opencovid.ca/}{COVID-19 Canada Open Data Working Group (CCODWG)}.
-Data is available through the associated ccodwg/Covid19Canada GitHub
-repository.
+Data is available both through the archived
+\href{https://github.com/ccodwg/Covid19Canada}{ccodwg/Covid19Canada GitHub repository}
+and the newer
+\href{https://github.com/ccodwg/CovidTimelineCanada}{ccodwg/CovidTimelineCanada GitHub repository},
+which also reports vaccine-related signals.
 }
 \details{
 This dataset contains versioned data covering the period from April 2020 to

@@ -1,48 +1,48 @@
-confirmed_7dav_incidence_prop <- covidcast(
-  data_source = "jhu-csse",
+library(dplyr)
+library(epidatr)
+library(epiprocess)
+
+confirmed_7dav_incidence_prop <- pub_covidcast(
+  source = "jhu-csse",
   signals = "confirmed_7dav_incidence_prop",
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20200301, 20211231),
   geo_values = "ca,fl,ny,tx,ga,pa"
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, case_rate_7d_av = value) %>%
   arrange(geo_value, time_value)
 
-deaths_7dav_incidence_prop <- covidcast(
-  data_source = "jhu-csse",
+deaths_7dav_incidence_prop <- pub_covidcast(
+  source = "jhu-csse",
   signals = "deaths_7dav_incidence_prop",
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20200301, 20211231),
   geo_values = "ca,fl,ny,tx,ga,pa"
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, death_rate_7d_av = value) %>%
   arrange(geo_value, time_value)
 
-confirmed_incidence_num <- covidcast(
-  data_source = "jhu-csse",
+confirmed_incidence_num <- pub_covidcast(
+  source = "jhu-csse",
   signals = "confirmed_incidence_num",
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20200301, 20211231),
   geo_values = "ca,fl,ny,tx,ga,pa"
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, cases = value) %>%
   arrange(geo_value, time_value)
 
-confirmed_7dav_incidence_num <- covidcast(
-  data_source = "jhu-csse",
+confirmed_7dav_incidence_num <- pub_covidcast(
+  source = "jhu-csse",
   signals = "confirmed_7dav_incidence_num",
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20200301, 20211231),
   geo_values = "ca,fl,ny,tx,ga,pa"
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, cases_7d_av = value) %>%
   arrange(geo_value, time_value)
 

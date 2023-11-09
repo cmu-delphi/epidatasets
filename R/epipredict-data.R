@@ -80,3 +80,26 @@
 #' by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
 #' Copyright Johns Hopkins University 2020.
 "counts_subset"
+
+#' Canadian COVID-19 case rates
+#'
+#' Data set for all Canadian provinces and territories containing COVID-19
+#' case rates (COVID-19 cases per 100,000 people) derived from COVID-19 case
+#' counts as reported by the
+#' \href{https://opencovid.ca/}{COVID-19 Canada Open Data Working Group (CCODWG)}.
+#' Data is available both through the archived
+#' \href{https://github.com/ccodwg/Covid19Canada}{ccodwg/Covid19Canada GitHub repository}
+#' and the newer
+#' \href{https://github.com/ccodwg/CovidTimelineCanada}{ccodwg/CovidTimelineCanada GitHub repository},
+#' which also reports vaccine-related signals.
+#'
+#' This dataset contains versioned data covering the period from April 2020 to
+#' December 2021 and is used in the [epipredict] slide vignette.
+#'
+#' @source This object contains a modified part of the COVID-19 Canada Open
+#' Data Working Group's
+#' \href{https://github.com/ccodwg/Covid19Canada}{Covid19Canada data repository} (archived).
+#' This data set is licensed under the terms of the
+#' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+#' by the COVID-19 Canada Open Data Working Group.
+"can_prov_cases"

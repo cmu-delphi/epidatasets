@@ -1,5 +1,9 @@
-dv_subset <- covidcast(
-  data_source = "doctor-visits",
+library(dplyr)
+library(epidatr)
+library(epiprocess)
+
+dv_subset <- pub_covidcast(
+  source = "doctor-visits",
   signals = "smoothed_adj_cli",
   time_type = "day",
   geo_type = "state",
@@ -7,14 +11,13 @@ dv_subset <- covidcast(
   geo_values = "ca,fl,ny,tx",
   issues = epirange(20200601, 20211201)
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, version = issue, percent_cli = value) %>%
   # We're using compactify=FALSE here and below to avoid some testthat test
   # failures on tests that were based on a non-compactified version.
   as_epi_archive(compactify = FALSE)
 
-case_rate_subset <- covidcast(
-  data_source = "jhu-csse",
+case_rate_subset <- pub_covidcast(
+  source = "jhu-csse",
   signals = "confirmed_7dav_incidence_prop",
   time_type = "day",
   geo_type = "state",
@@ -22,7 +25,6 @@ case_rate_subset <- covidcast(
   geo_values = "ca,fl,ny,tx",
   issues = epirange(20200601, 20211201)
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, version = issue, case_rate_7d_av = value) %>%
   as_epi_archive(compactify = FALSE)
 

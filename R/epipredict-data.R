@@ -87,7 +87,7 @@
 #' case rates (COVID-19 cases per 100,000 people) derived from COVID-19 case
 #' counts as reported by the
 #' \href{https://opencovid.ca/}{COVID-19 Canada Open Data Working Group (CCODWG)}.
-#' Data is available throught the associated ccodwg/Covid19Canada GitHub
+#' Data is available through the associated ccodwg/Covid19Canada GitHub
 #' repository.
 #'
 #' This dataset contains versioned data covering the period from April 2020 to

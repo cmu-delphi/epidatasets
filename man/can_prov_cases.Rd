@@ -23,7 +23,7 @@ Data set for all Canadian provinces and territories containing COVID-19
 case rates (COVID-19 cases per 100,000 people) derived from COVID-19 case
 counts as reported by the
 \href{https://opencovid.ca/}{COVID-19 Canada Open Data Working Group (CCODWG)}.
-Data is available throught the associated ccodwg/Covid19Canada GitHub
+Data is available through the associated ccodwg/Covid19Canada GitHub
 repository.
 }
 \details{

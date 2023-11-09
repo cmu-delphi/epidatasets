@@ -2,26 +2,24 @@ library(dplyr)
 library(epidatr)
 library(epiprocess)
 
-x <- covidcast(
-  data_source = "jhu-csse",
+x <- pub_covidcast(
+  source = "jhu-csse",
   signals = "confirmed_7dav_incidence_prop",
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20200301, 20211231),
   geo_values = "*"
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, case_rate = value)
 
-y <- covidcast(
-  data_source = "jhu-csse",
+y <- pub_covidcast(
+  source = "jhu-csse",
   signals = "deaths_7dav_incidence_prop",
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20200301, 20211231),
   geo_values = "*"
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, death_rate = value)
 
 covid_case_death_rates <- x %>%

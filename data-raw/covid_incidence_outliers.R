@@ -2,8 +2,8 @@ library(dplyr)
 library(epidatr)
 library(epiprocess)
 
-covid_incidence_outliers <- covidcast(
-  data_source = "jhu-csse",
+covid_incidence_outliers <- pub_covidcast(
+  source = "jhu-csse",
   signals = "confirmed_incidence_num",
   time_type = "day",
   geo_type = "state",
@@ -11,7 +11,6 @@ covid_incidence_outliers <- covidcast(
   geo_values = "fl,nj",
   as_of = 20211028
 ) %>%
-  fetch() %>%
   select(geo_value, time_value, cases = value) %>%
   as_epi_df()
 

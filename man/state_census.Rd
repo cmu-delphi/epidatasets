@@ -6,23 +6,23 @@
 \title{State population data}
 \format{
 Data frame with 57 rows (including one for the United States as a
-  whole, plus the District of Columbia, Puerto Rico Commonwealth,
-  American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana,
-  Islands).
+whole, plus the District of Columbia, Puerto Rico Commonwealth,
+American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana,
+Islands).
 
 \describe{
-  \item{fips}{FIPS code}
-  \item{name}{Full name of the state or territory}
-  \item{pop}{Estimate of the location's resident population in
-     2019.}
-  \item{abbr}{Postal abbreviation for the location}
+\item{fips}{FIPS code}
+\item{name}{Full name of the state or territory}
+\item{pop}{Estimate of the location's resident population in
+2019.}
+\item{abbr}{Postal abbreviation for the location}
 }
 }
 \source{
 United States Census Bureau, at
-  \url{https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf},
-  \url{https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html},
-  and \url{https://www.census.gov/data/tables/2010/dec/2010-island-areas.html}
+\url{https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf},
+\url{https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html},
+and \url{https://www.census.gov/data/tables/2010/dec/2010-island-areas.html}
 }
 \usage{
 state_census

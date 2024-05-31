@@ -10,7 +10,7 @@ Authors@R: c(
   )
 Description: This package contains data sets used to compile vignettes and
     other documentation in Delphi R Packages. The goal is to avoid calls
-    to the Delphi Epidata API, and deposit some examples here for easy
+    to the Delphi Epidata API, and to deposit some examples here for easy
     offline use.
 License: file LICENSE
 Depends:
@@ -19,15 +19,16 @@ Suggests:
     covidcast,
     dplyr,
     epidatr,
-    epipredict,
+    epiprocess,
     here,
+    httr,
+    jsonlite,
     lubridate,
     magrittr,
     purrr,
     readr
 Remotes:
     cmu-delphi/epidatr,
-    cmu-delphi/epipredict,
     cmu-delphi/epiprocess
 Encoding: UTF-8
 LazyData: true

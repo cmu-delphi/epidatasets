@@ -73,7 +73,7 @@
 #' reported
 #' by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API.
 #' This data set covers the period from June 2021 to December 2021, and is
-#' used in the [epipredict] Vignette on ... .
+#' used in the epipredict Vignette on ... .
 #'
 #' @source This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
@@ -94,7 +94,7 @@
 #' which also reports vaccine-related signals.
 #'
 #' This dataset contains versioned data covering the period from April 2020 to
-#' December 2021 and is used in the [epipredict] slide vignette.
+#' December 2021 and is used in the epipredict slide vignette.
 #'
 #' @source This object contains a modified part of the COVID-19 Canada Open
 #' Data Working Group's

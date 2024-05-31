@@ -129,7 +129,7 @@
 #' Data set for 2 states containing COVID-19 Incident Cases as reported
 #' by JHU-CSSE and Downloaded from the CMU Delphi COVIDcast Epidata API.
 #' This data set covers the period from June 2020 to May 2021, and is
-#' used in the [epiprocess] Vignette on Outliers.
+#' used in the epiprocess Vignette on Outliers.
 #'
 #' @source This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
@@ -142,7 +142,7 @@
 #' Data set for 4 states containing COVID-19 Cumulative Cases as reported
 #' by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API.
 #' This data set covers the period from March 2020 to January 2022, and is
-#' used in the [epiprocess] Vignette on ... .
+#' used in the epiprocess Vignette on ... .
 #'
 #' @source This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}

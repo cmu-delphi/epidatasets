@@ -1,9 +1,9 @@
-# Use covidcast::county_census to get the county and state names
-library(dplyr)
-library(covidcast)
 library(epidatr)
+library(covidcast)
 library(epiprocess)
+library(dplyr)
 
+# Use covidcast::county_census to get the county and state names
 y <- covidcast::county_census %>%
   filter(STNAME %in% c("Massachusetts", "Vermont"), STNAME != CTYNAME) %>%
   select(geo_value = FIPS, county_name = CTYNAME, state_name = STNAME)
@@ -12,10 +12,10 @@ y <- covidcast::county_census %>%
 covid_incidence_county_subset <- pub_covidcast(
   source = "jhu-csse",
   signals = "confirmed_incidence_num",
-  time_type = "day",
   geo_type = "county",
+  time_type = "day",
+  geo_values = paste(y$geo_value, collapse = ","),
   time_values = epirange(20200601, 20211231),
-  geo_values = paste(y$geo_value, collapse = ",")
 ) %>%
   select(geo_value, time_value, cases = value) %>%
   full_join(y, by = "geo_value") %>%

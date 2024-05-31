@@ -21,6 +21,6 @@ Data set for 5 states containing COVID-19 Incident Cases and Deaths as
 reported
 by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API.
 This data set covers the period from June 2021 to December 2021, and is
-used in the \link{epipredict} Vignette on ... .
+used in the epipredict Vignette on ... .
 }
 \keyword{datasets}

@@ -48,6 +48,6 @@ and is limited to California and Florida.
 Data set for 2 states containing COVID-19 Incident Cases as reported
 by JHU-CSSE and Downloaded from the CMU Delphi COVIDcast Epidata API.
 This data set covers the period from June 2020 to May 2021, and is
-used in the \link{epiprocess} Vignette on Outliers.
+used in the epiprocess Vignette on Outliers.
 }
 \keyword{datasets}

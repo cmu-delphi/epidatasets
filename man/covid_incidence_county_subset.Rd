@@ -8,14 +8,23 @@
 An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 16212 rows and 5 columns.
 }
 \source{
-This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+This object contains a modified part of the
+\href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as
+\href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}.
+This data set is licensed under the terms of the
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
-by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
-Copyright Johns Hopkins University 2020.
+by the Johns Hopkins University on behalf of its Center for Systems
+Science in Engineering. Copyright Johns Hopkins University 2020.
 
 Modifications:
 \itemize{
-\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes. The 7-day average signals are computed by Delphi by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
+These signals are taken directly from the JHU CSSE
+\href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository}
+without changes. The 7-day average signals are computed by Delphi by
+as moving averages of the preceding 7 days, so the signal for
+June 7 is the average of the underlying data for June 1 through 7,
+inclusive.
 \item Furthermore, the data has been limited to a very small number of rows,
 formatted into a tibble, and the signal names slightly altered.
 }

@@ -39,6 +39,9 @@ Systems Science and Engineering at Johns Hopkins University.
 This example data ranges from Mar 1, 2020 to Dec 31, 2021, and is limited to
 California, Florida, Texas, New York, Georgia, and Pennsylvania.
 }
+\details{
+It is used in the {epiprocess} growth rate and \code{epi_slide} vignettes.
+}
 \section{Data dictionary}{
 
 A tibble with columns:

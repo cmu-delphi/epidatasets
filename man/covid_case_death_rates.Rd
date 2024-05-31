@@ -3,7 +3,7 @@
 \docType{data}
 \name{covid_case_death_rates}
 \alias{covid_case_death_rates}
-\title{JHU daily COVID-19 cases and deaths from all states}
+\title{JHU daily COVID-19 cases and deaths rates from all states}
 \format{
 An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 37576 rows and 4 columns.
 }
@@ -35,7 +35,7 @@ This data source of confirmed COVID-19 cases and deaths is based on reports
 made available by the Center for Systems Science and Engineering at Johns
 Hopkins University, as downloaded from the CMU Delphi COVIDcast Epidata
 API. This example data ranges from Dec 31, 2020 to Dec 31, 2021, and
-includes all states.
+includes all states. It is used in the {epiprocess} correlation vignette.
 }
 \section{Data dictionary}{
 

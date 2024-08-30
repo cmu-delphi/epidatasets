@@ -1,5 +1,5 @@
 #' Subset of JHU daily state COVID-19 cases and deaths from 4 states
-#'
+#' @description
 #' This data source of confirmed COVID-19 cases and deaths
 #' is based on reports made available by the Center for
 #' Systems Science and Engineering at Johns Hopkins University.
@@ -44,7 +44,7 @@
 "cases_deaths_subset"
 
 #' Subset of daily COVID-19 doctor visits and cases from 6 states in archive format
-#'
+#' @description
 #' This data source is based on information about outpatient visits,
 #' provided to us by health system partners, and also contains confirmed
 #' COVID-19 cases based on reports made available by the Center for
@@ -79,7 +79,7 @@
 "archive_cases_dv_subset_dt"
 
 #' Subset of JHU daily COVID-19 cases from counties in Massachusetts and Vermont
-#'
+#' @description
 #' This data source of confirmed COVID-19 cases and deaths
 #' is based on reports made available by the Center for
 #' Systems Science and Engineering at Johns Hopkins University.
@@ -121,7 +121,7 @@
 # Epiprocess Vignette Data ----------------------------------------------------
 
 #' Subset of JHU daily COVID-19 cases from California and Florida
-#'
+#' @description
 #' This data source of confirmed COVID-19 cases is based on reports made
 #' available by the Center for Systems Science and Engineering at Johns
 #' Hopkins University. This example data is downloaded from the CMU Delphi
@@ -153,7 +153,7 @@
 "covid_incidence_outliers"
 
 #' Subset of COVID-19 Cumulative Cases from 4 states
-#'
+#' @description
 #' Data set for 4 states containing COVID-19 Cumulative Cases as reported by
 #' JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API. This
 #' data set covers the period from March 2020 to January 2022, and is limited

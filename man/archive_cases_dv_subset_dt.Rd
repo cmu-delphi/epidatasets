@@ -31,8 +31,7 @@ COVID-19 cases based on reports made available by the Center for
 Systems Science and Engineering at Johns Hopkins University.
 This example data ranges from June 1, 2020 to Dec 1, 2021, and
 is also limited to California, Florida, Texas, and New York.
-}
-\details{
+
 It is used in the {epiprocess} \code{compactify}, \code{epix_archive}, and
 advanced-use vignettes.
 }

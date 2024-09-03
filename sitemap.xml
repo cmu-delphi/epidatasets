@@ -1,51 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/404.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/index.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/archive_cases_dv_subset_dt.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/can_prov_cases.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/cases_deaths_subset.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/counts_subset.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/covid_case_death_rates.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/covid_incidence_county_subset.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/covid_incidence_outliers.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/ctis_covid_behaviours.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/jhu_confirmed_cumulative_num.html</loc>
-  </url>
-  <url>
-    <loc>https://cmu-delphi.github.io/epidatasets/reference/state_census.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://cmu-delphi.github.io/epidatasets/404.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/LICENSE-text.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/LICENSE.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/authors.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/index.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/archive_cases_dv_subset_dt.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/can_prov_cases.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/cases_deaths_subset.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/counts_subset.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/covid_case_death_rates.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/covid_incidence_county_subset.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/covid_incidence_outliers.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/ctis_covid_behaviours.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/index.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/jhu_confirmed_cumulative_num.html</loc></url>
+<url><loc>https://cmu-delphi.github.io/epidatasets/reference/state_census.html</loc></url>
 </urlset>
+

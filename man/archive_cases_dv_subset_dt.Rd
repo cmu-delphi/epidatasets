@@ -5,13 +5,13 @@
 \alias{archive_cases_dv_subset_dt}
 \title{Subset of daily doctor visits and cases in archive format}
 \format{
-An `epi_archive$DT` data format. The data table DT has 129,638 rows and 5 columns:
+An \code{epi_archive$DT} data format. The data table DT has 129,638 rows and 5 columns:
 \describe{
-  \item{geo_value}{the geographic value associated with each row of measurements.}
-  \item{time_value}{the time value associated with each row of measurements.}
-  \item{version}{the time value specifying the version for each row of measurements. }
-  \item{percent_cli}{percentage of doctor’s visits with CLI (COVID-like illness) computed from medical insurance claims}
-  \item{case_rate_7d_av}{7-day average signal of number of new confirmed deaths due to COVID-19 per 100,000 population, daily}
+\item{geo_value}{the geographic value associated with each row of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{version}{the time value specifying the version for each row of measurements. }
+\item{percent_cli}{percentage of doctor’s visits with CLI (COVID-like illness) computed from medical insurance claims}
+\item{case_rate_7d_av}{7-day average signal of number of new confirmed deaths due to COVID-19 per 100,000 population, daily}
 }
 }
 \source{
@@ -21,9 +21,11 @@ by Johns Hopkins University on behalf of its Center for Systems Science in Engin
 Copyright Johns Hopkins University 2020.
 
 Modifications:
-* \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits API}: The signal `percent_cli` is taken directly from the API without changes.
-* \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: `case_rate_7d_av` signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
-* Furthermore, the data is a subset of the full dataset, the signal names slightly altered, and formatted into a tibble.
+\itemize{
+\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits API}: The signal \code{percent_cli} is taken directly from the API without changes.
+\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: \code{case_rate_7d_av} signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+\item Furthermore, the data is a subset of the full dataset, the signal names slightly altered, and formatted into a tibble.
+}
 }
 \usage{
 archive_cases_dv_subset_dt

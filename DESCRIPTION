@@ -3,7 +3,8 @@ Package: epidatasets
 Title: Epidemiological Data for Delphi Tooling Examples
 Version: 0.0.1
 Authors@R: c(
-    person(c("Daniel", "J."), "McDonald", email="daniel@stat.ubc.ca", role = c("cre", "aut")),
+    person(c("Daniel", "J."), "McDonald", email="daniel@stat.ubc.ca", role = c("aut")),
+    person("Nat", "DeFries", email="ndefries@andrew.cmu.edu", role = c("cre", "aut")),
     person("Johns Hopkins University Center for Systems Science and Engineering", role = "dtc", comment = "Owner of COVID-19 cases and deaths data sourced from the COVID-19 Data Repository"),
     person("Johns Hopkins University", role = "cph", comment = "Copyright holder of COVID-19 cases and deaths data sourced from the COVID-19 Data Repository"),
     person("Carnegie Mellon University Delphi Group", role = "dtc", comment = "Owner of masking and social-distancing data sourced from the COVID-19 Trends and Impacts Survey")

@@ -1,4 +1,4 @@
-#' Subset of JHU daily state COVID-19 cases and deaths from 4 states
+#' Subset of JHU daily state COVID-19 cases and deaths from 6 states
 #' @description
 #' This data source of confirmed COVID-19 cases and deaths
 #' is based on reports made available by the Center for
@@ -154,7 +154,7 @@
 #'   formatted into a tibble, and the signal names slightly altered.
 "covid_incidence_outliers"
 
-#' Subset of COVID-19 Cumulative Cases from 4 states
+#' Subset of COVID-19 cumulative case counts from 4 states
 #' @description
 #' Data set for 4 states containing COVID-19 Cumulative Cases as reported by
 #' JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API. This

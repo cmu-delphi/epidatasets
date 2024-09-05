@@ -64,7 +64,7 @@
 
 # Epipredict Vignette Data ----------------------------------------------------
 
-#' Subset of CTIS COVID-19 behaviours from 5 states
+#' Subset of CTIS COVID-19-related behaviours from 5 states
 #'
 #' Data set for a handful of states on masking and distancing behaviours
 #' during the COVID-19 Pandemic, and downloaded from the CMU Delphi COVIDcast

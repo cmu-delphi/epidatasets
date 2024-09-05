@@ -3,7 +3,7 @@
 \docType{data}
 \name{ctis_covid_behaviours}
 \alias{ctis_covid_behaviours}
-\title{Subset of CTIS COVID-19 behaviours from 5 states}
+\title{Subset of CTIS COVID-19-related behaviours from 5 states}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
 }

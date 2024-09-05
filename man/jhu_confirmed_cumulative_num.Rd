@@ -3,7 +3,7 @@
 \docType{data}
 \name{jhu_confirmed_cumulative_num}
 \alias{jhu_confirmed_cumulative_num}
-\title{Subset of COVID-19 Cumulative Cases from 4 states}
+\title{Subset of COVID-19 cumulative case counts from 4 states}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2808 rows and 15 columns.
 }

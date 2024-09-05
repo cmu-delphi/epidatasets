@@ -3,7 +3,7 @@
 \docType{data}
 \name{cases_deaths_subset}
 \alias{cases_deaths_subset}
-\title{Subset of JHU daily state COVID-19 cases and deaths from 4 states}
+\title{Subset of JHU daily state COVID-19 cases and deaths from 6 states}
 \format{
 An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4026 rows and 6 columns.
 }

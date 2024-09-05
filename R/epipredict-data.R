@@ -144,5 +144,7 @@
 #' \href{https://github.com/ccodwg/Covid19Canada}{Covid19Canada data repository} (archived).
 #' This data set is licensed under the terms of the
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
-#' by the COVID-19 Canada Open Data Working Group.
+#' by the COVID-19 Canada Open Data Working Group. The COVID-19 Canada Open
+#' Data Working Group collected the data from publicly available sources such
+#' as government datasets and news releases.
 "can_prov_cases"

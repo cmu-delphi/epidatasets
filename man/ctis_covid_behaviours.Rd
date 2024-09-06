@@ -31,8 +31,9 @@ ctis_covid_behaviours
 \description{
 Data set for a handful of states on masking and distancing behaviours
 during the COVID-19 Pandemic, and downloaded from the CMU Delphi COVIDcast
-Epidata API. This data set covers the period from June to December 2021,
-and is limited to California, Florida, Texas, New Jersey, and New York.
+Epidata API. This example data is a snapshot as of March 20, 2024, and
+ranges from June 4, 2021 to December 31, 2021.
+It is limited to California, Florida, Texas, New Jersey, and New York.
 }
 \section{Data dictionary}{
 

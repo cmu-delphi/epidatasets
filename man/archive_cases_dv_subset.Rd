@@ -25,12 +25,12 @@ signal names slightly altered, and formatted into a tibble.
 archive_cases_dv_subset
 }
 \description{
-This data source is based on information about outpatient visits,
-provided to us by health system partners, and also contains confirmed
-COVID-19 cases based on reports made available by the Center for
-Systems Science and Engineering at Johns Hopkins University.
-This example data ranges from June 1, 2020 to Dec 1, 2021, and
-is also limited to California, Florida, Texas, and New York.
+This data source is based on information about outpatient visits, provided
+to us by health system partners, and also contains confirmed COVID-19
+cases based on reports made available by the Center for Systems Science
+and Engineering at Johns Hopkins University. This example data ranges from
+June 1, 2020 to December 1, 2021, issued on dates from June 1, 2020 to December 1,
+2021. It is limited to California, Florida, Texas, and New York.
 
 It is used in the {epiprocess} \code{compactify}, \code{epix_archive}, and
 advanced-use vignettes.

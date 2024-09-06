@@ -3,7 +3,8 @@
 #' This data source of confirmed COVID-19 cases and deaths is based on reports
 #' made available by the Center for Systems Science and Engineering at Johns
 #' Hopkins University, as downloaded from the CMU Delphi COVIDcast Epidata
-#' API. This example data ranges from Dec 31, 2020 to Dec 31, 2021, and
+#' API. This example data is a snapshot as of March 20, 2024, and
+#' ranges from December 31, 2020 to December 31, 2021. It
 #' includes all states. It is used in the {epiprocess} correlation vignette.
 #'
 #' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 37576 rows and 4 columns.
@@ -68,8 +69,9 @@
 #'
 #' Data set for a handful of states on masking and distancing behaviours
 #' during the COVID-19 Pandemic, and downloaded from the CMU Delphi COVIDcast
-#' Epidata API. This data set covers the period from June to December 2021,
-#' and is limited to California, Florida, Texas, New Jersey, and New York.
+#' Epidata API. This example data is a snapshot as of March 20, 2024, and
+#' ranges from June 4, 2021 to December 31, 2021.
+#' It is limited to California, Florida, Texas, New Jersey, and New York.
 #'
 #' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
 #' @section Data dictionary:
@@ -102,7 +104,8 @@
 #'
 #' Data set for 5 states containing COVID-19 Incident Cases and Deaths as
 #' reported by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata
-#' API. This data set covers the period from June 2021 to December 2021, and
+#' API. This example data is a snapshot as of March 20, 2024, and
+#' ranges from June 4, 2021 to December 31, 2021. It
 #' is limited to California, Florida, Texas, New Jersey, and New York.
 #'
 #' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
@@ -136,8 +139,9 @@
 #' \href{https://github.com/ccodwg/CovidTimelineCanada}{ccodwg/CovidTimelineCanada GitHub repository},
 #' which also reports vaccine-related signals.
 #'
-#' This dataset contains versioned data covering the period from April 2020 to
-#' December 2021 and is used in the epipredict slide vignette.
+#' This dataset contains versioned data snapshots from February 1, 2021 to December
+#' 1, 2021 covering the period from April 2, 2020 to December 1, 2021. It is
+#' used in the epipredict slide vignette.
 #'
 #' @source This object contains a modified part of the COVID-19 Canada Open
 #' Data Working Group's

@@ -18,8 +18,9 @@ jhu_confirmed_cumulative_num
 }
 \description{
 Data set for 4 states containing COVID-19 Cumulative Cases as reported by
-JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API. This
-data set covers the period from March 2020 to January 2022, and is limited
+JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API.
+This example data is a snapshot as of March 20, 2024, and
+ranges from March 1, 2020 to January 31, 2022. It is limited
 to California, Florida, New York, and Texas.
 
 It is used in the {epiprocess} "Getting Started" vignette.

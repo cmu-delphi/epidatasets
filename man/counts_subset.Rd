@@ -21,7 +21,8 @@ counts_subset
 \description{
 Data set for 5 states containing COVID-19 Incident Cases and Deaths as
 reported by JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata
-API. This data set covers the period from June 2021 to December 2021, and
+API. This example data is a snapshot as of March 20, 2024, and
+ranges from June 4, 2021 to December 31, 2021. It
 is limited to California, Florida, Texas, New Jersey, and New York.
 }
 \section{Data dictionary}{

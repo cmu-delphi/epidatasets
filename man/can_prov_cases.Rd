@@ -32,7 +32,8 @@ and the newer
 which also reports vaccine-related signals.
 }
 \details{
-This dataset contains versioned data covering the period from April 2020 to
-December 2021 and is used in the epipredict slide vignette.
+This dataset contains versioned data snapshots from February 1, 2021 to December
+1, 2021 covering the period from April 2, 2020 to December 1, 2021. It is
+used in the epipredict slide vignette.
 }
 \keyword{datasets}

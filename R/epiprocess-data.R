@@ -1,10 +1,10 @@
 #' Subset of JHU daily state COVID-19 cases and deaths from 6 states
 #' @description
-#' This data source of confirmed COVID-19 cases and deaths
-#' is based on reports made available by the Center for
-#' Systems Science and Engineering at Johns Hopkins University.
-#' This example data ranges from Mar 1, 2020 to Dec 31, 2021, and is limited to
-#' California, Florida, Texas, New York, Georgia, and Pennsylvania.
+#' This data source of confirmed COVID-19 cases and deaths is based on reports
+#' made available by the Center for Systems Science and Engineering at Johns
+#' Hopkins University. This example data is a snapshot as of March 20, 2024, and
+#' ranges from March 1, 2020 to December 31, 2021. It is limited to California,
+#' Florida, Texas, New York, Georgia, and Pennsylvania.
 #'
 #' It is used in the {epiprocess} growth rate and `epi_slide` vignettes.
 #'
@@ -45,12 +45,12 @@
 
 #' Subset of daily COVID-19 doctor visits and cases from 6 states in archive format
 #' @description
-#' This data source is based on information about outpatient visits,
-#' provided to us by health system partners, and also contains confirmed
-#' COVID-19 cases based on reports made available by the Center for
-#' Systems Science and Engineering at Johns Hopkins University.
-#' This example data ranges from June 1, 2020 to Dec 1, 2021, and
-#' is also limited to California, Florida, Texas, and New York.
+#' This data source is based on information about outpatient visits, provided
+#' to us by health system partners, and also contains confirmed COVID-19
+#' cases based on reports made available by the Center for Systems Science
+#' and Engineering at Johns Hopkins University. This example data ranges from
+#' June 1, 2020 to December 1, 2021, issued on dates from June 1, 2020 to December 1,
+#' 2021. It is limited to California, Florida, Texas, and New York.
 #'
 #' It is used in the {epiprocess} `compactify`, `epix_archive`, and
 #' advanced-use vignettes.
@@ -83,8 +83,9 @@
 #' This data source of confirmed COVID-19 cases and deaths
 #' is based on reports made available by the Center for
 #' Systems Science and Engineering at Johns Hopkins University.
-#' This example data ranges from Mar 1, 2020 to Dec 31, 2021,
-#' and is limited to Massachusetts and Vermont.
+#' This example data is a snapshot as of March 20, 2024, and
+#' ranges from March 1, 2020 to December 31, 2021.
+#' It is limited to Massachusetts and Vermont.
 #'
 #' It is used in the {epiprocess} aggregation vignette.
 #'
@@ -125,8 +126,8 @@
 #' This data source of confirmed COVID-19 cases is based on reports made
 #' available by the Center for Systems Science and Engineering at Johns
 #' Hopkins University. This example data is downloaded from the CMU Delphi
-#' COVIDcast Epidata API. It is a snapshot as of Oct 28, 2021 and captures the
-#' cases from June 1, 2020 to May 31, 2021 and is limited to New Jersey and
+#' COVIDcast Epidata API. It is a snapshot as of October 28, 2021, and captures the
+#' cases from June 1, 2020 to May 31, 2021. It is limited to New Jersey and
 #' Florida.
 #'
 #' This data set is used in the {epiprocess} vignette on outliers.
@@ -157,8 +158,9 @@
 #' Subset of COVID-19 cumulative case counts from 4 states
 #' @description
 #' Data set for 4 states containing COVID-19 Cumulative Cases as reported by
-#' JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API. This
-#' data set covers the period from March 2020 to January 2022, and is limited
+#' JHU-CSSE and downloaded from the CMU Delphi COVIDcast Epidata API.
+#' This example data is a snapshot as of March 20, 2024, and
+#' ranges from March 1, 2020 to January 31, 2022. It is limited
 #' to California, Florida, New York, and Texas.
 #'
 #' It is used in the {epiprocess} "Getting Started" vignette.

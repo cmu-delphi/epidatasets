@@ -4,13 +4,17 @@ library(dplyr)
 library(epidatr)
 library(epiprocess)
 
+d <- as.Date("2024-03-20")
+
 x <- pub_covidcast(
   source = "jhu-csse",
   signals = "confirmed_incidence_num",
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20210604, 20211231),
-  geo_values = "ca,fl,tx,ny,nj") %>%
+  geo_values = "ca,fl,tx,ny,nj",
+  as_of = d
+) %>%
   select(geo_value, time_value, cases = value)
 
 y <- pub_covidcast(
@@ -19,10 +23,12 @@ y <- pub_covidcast(
   time_type = "day",
   geo_type = "state",
   time_values = epirange(20210604, 20211231),
-  geo_values = "ca,fl,tx,ny,nj") %>%
+  geo_values = "ca,fl,tx,ny,nj",
+  as_of = d
+) %>%
   select(geo_value, time_value, deaths = value)
 
 counts_subset <- full_join(x, y, by = c("geo_value", "time_value")) %>%
-  as_epi_df()
+  as_epi_df(as_of = d)
 
 usethis::use_data(counts_subset, overwrite = TRUE)

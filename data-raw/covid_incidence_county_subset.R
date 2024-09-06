@@ -4,6 +4,8 @@ library(covidcast)
 library(epidatr)
 library(epiprocess)
 
+d <- as.Date("2024-03-20")
+
 y <- covidcast::county_census %>%
   filter(STNAME %in% c("Massachusetts", "Vermont"), STNAME != CTYNAME) %>%
   select(geo_value = FIPS, county_name = CTYNAME, state_name = STNAME)
@@ -15,10 +17,11 @@ covid_incidence_county_subset <- pub_covidcast(
   time_type = "day",
   geo_type = "county",
   time_values = epirange(20200601, 20211231),
-  geo_values = paste(y$geo_value, collapse = ",")
+  geo_values = paste(y$geo_value, collapse = ","),
+  as_of = d
 ) %>%
   select(geo_value, time_value, cases = value) %>%
   full_join(y, by = "geo_value") %>%
-  as_epi_df(as_of = as.Date("2024-03-20"))
+  as_epi_df(as_of = d)
 
 usethis::use_data(covid_incidence_county_subset, overwrite = TRUE)

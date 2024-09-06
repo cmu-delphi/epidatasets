@@ -2,6 +2,8 @@ library(dplyr)
 library(epidatr)
 library(epiprocess)
 
+d <- as.Date("2021-10-28")
+
 covid_incidence_outliers <- pub_covidcast(
   source = "jhu-csse",
   signals = "confirmed_incidence_num",
@@ -9,9 +11,9 @@ covid_incidence_outliers <- pub_covidcast(
   geo_type = "state",
   time_values = epirange(20200601, 20210531),
   geo_values = "fl,nj",
-  as_of = 20211028
+  as_of = d
 ) %>%
   select(geo_value, time_value, cases = value) %>%
-  as_epi_df()
+  as_epi_df(as_of = d)
 
 usethis::use_data(covid_incidence_outliers, overwrite = TRUE)

@@ -55,7 +55,7 @@
 #' It is used in the {epiprocess} `compactify`, `epix_archive`, and
 #' advanced-use vignettes.
 #'
-#' @format An object of class \code{data.table} (inherits from \code{data.frame}) with 129638 rows and 5 columns.
+#' @format An `epi_archive`. The data stored in the DT attribute is an object of class \code{data.table} (inherits from \code{data.frame}) with 129638 rows and 5 columns.
 #' @section Data dictionary:
 #' An `epi_archive$DT` data format with columns:
 #' \describe{
@@ -76,7 +76,7 @@
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: `case_rate_7d_av` signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
 #' * Furthermore, the data has been limited to a very small number of rows, the
 #'   signal names slightly altered, and formatted into a tibble.
-"archive_cases_dv_subset_dt"
+"archive_cases_dv_subset"
 
 #' Subset of JHU daily COVID-19 cases from counties in Massachusetts and Vermont
 #' @description

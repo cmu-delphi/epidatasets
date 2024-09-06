@@ -19,6 +19,6 @@ covid_incidence_county_subset <- pub_covidcast(
 ) %>%
   select(geo_value, time_value, cases = value) %>%
   full_join(y, by = "geo_value") %>%
-  as_epi_df()
+  as_epi_df(as_of = as.Date("2024-03-20"))
 
 usethis::use_data(covid_incidence_county_subset, overwrite = TRUE)

@@ -33,10 +33,4 @@ archive_cases_dv_subset = epix_merge(
   sync = "locf",
   compactify = FALSE)
 
-# If we directly store an epi_archive R6 object as data, it will store its class
-# implementation there as well. To prevent mismatches between these stored
-# implementations and the latest class definition, don't store them as R6
-# objects; store the DT and construct the R6 object on request.
-archive_cases_dv_subset_dt <- archive_cases_dv_subset$DT
-
-usethis::use_data(archive_cases_dv_subset_dt, overwrite = TRUE)
+usethis::use_data(archive_cases_dv_subset, overwrite = TRUE)

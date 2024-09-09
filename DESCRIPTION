@@ -21,7 +21,6 @@ Suggests:
     covidcast,
     dplyr,
     epidatr,
-    epiprocess,
     here,
     httr,
     jsonlite,
@@ -29,6 +28,8 @@ Suggests:
     magrittr,
     purrr,
     readr
+Enhances:
+    epiprocess
 Remotes:
     cmu-delphi/epidatr,
     cmu-delphi/epiprocess

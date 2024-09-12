@@ -1,5 +1,3 @@
-## code to prepare `ctis_covid_behaviours` dataset goes here
-
 library(dplyr)
 library(epidatr)
 
@@ -28,6 +26,7 @@ behav_ind_distancing <- pub_covidcast(
   select(geo_value, time_value, distancing = value)
 
 ctis_covid_behaviours <- behav_ind_mask %>%
-  full_join(behav_ind_distancing, by = c("geo_value", "time_value"))
+  full_join(behav_ind_distancing, by = c("geo_value", "time_value")) %>%
+  as_tibble()
 
 usethis::use_data(ctis_covid_behaviours, overwrite = TRUE)

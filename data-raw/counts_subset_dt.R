@@ -1,8 +1,5 @@
-## code to prepare jhu_incidence_num dataset goes here
-
 library(dplyr)
 library(epidatr)
-library(epiprocess)
 
 d <- as.Date("2024-03-20")
 
@@ -28,7 +25,7 @@ y <- pub_covidcast(
 ) %>%
   select(geo_value, time_value, deaths = value)
 
-counts_subset <- full_join(x, y, by = c("geo_value", "time_value")) %>%
-  as_epi_df(as_of = d)
+counts_subset_dt <- full_join(x, y, by = c("geo_value", "time_value")) %>%
+  as_tibble()
 
-usethis::use_data(counts_subset, overwrite = TRUE)
+usethis::use_data(counts_subset_dt, internal = TRUE, overwrite = TRUE)

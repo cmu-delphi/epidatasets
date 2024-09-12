@@ -1,7 +1,6 @@
-## code to prepare `can_prov_cases` dataset goes here
+## code to prepare `can_prov_cases_dt` dataset goes here
 
 library(dplyr)
-library(epiprocess)
 library(readr)
 library(purrr)
 library(httr)
@@ -107,8 +106,8 @@ ca_pop <- read_csv(
   rename(province = Province, abbreviation = shortProvince, population = Population)
 abbrev_map <- setNames(ca_pop$province, ca_pop$abbreviation)
 
-# Read in data and convert to `epi_df`s.
-can_prov_cases <- purrr::map2(commit_pages$data_url, commit_pages$date, function(url, date) {
+# Read in data
+can_prov_cases_dt <- purrr::map2(commit_pages$data_url, commit_pages$date, function(url, date) {
   raw <- readr::read_csv(
     url,
     col_types = cols(
@@ -135,14 +134,15 @@ can_prov_cases <- purrr::map2(commit_pages$data_url, commit_pages$date, function
     filter(!is.na(province), time_value > "2020-04-01") %>%
     mutate(geo_value = province,
            case_rate = cases / population * 1e5) %>%
-    select(geo_value, time_value, case_rate) %>%
-    as_epi_df(geo_type = "province", as_of = date)
+    select(geo_value, time_value, case_rate)
   
   return(result)
 })
-names(can_prov_cases) <- commit_pages$date
-can_prov_cases <- can_prov_cases %>% bind_rows(.id = "version") %>%
-  mutate(version = lubridate::ymd(version)) %>% 
-  arrange(version)
 
-usethis::use_data(can_prov_cases, overwrite = TRUE)
+names(can_prov_cases_dt) <- commit_pages$date
+can_prov_cases_dt <- can_prov_cases_dt %>% bind_rows(.id = "version") %>%
+  mutate(version = lubridate::ymd(version)) %>% 
+  arrange(version) %>%
+  as_tibble()
+
+usethis::use_data(can_prov_cases_dt, internal = TRUE, overwrite = TRUE)

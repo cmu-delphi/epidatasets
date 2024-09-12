@@ -1,6 +1,5 @@
 library(dplyr)
 library(epidatr)
-library(epiprocess)
 
 d <- as.Date("2024-03-20")
 
@@ -52,13 +51,13 @@ confirmed_7dav_incidence_num <- pub_covidcast(
   select(geo_value, time_value, cases_7d_av = value) %>%
   arrange(geo_value, time_value)
 
-cases_deaths_subset <- confirmed_7dav_incidence_prop %>%
+cases_deaths_subset_dt <- confirmed_7dav_incidence_prop %>%
   full_join(deaths_7dav_incidence_prop,
             by = c("geo_value", "time_value")) %>%
   full_join(confirmed_incidence_num,
             by = c("geo_value", "time_value")) %>%
   full_join(confirmed_7dav_incidence_num,
             by = c("geo_value", "time_value")) %>%
-  as_epi_df(as_of = d)
+  as_tibble()
 
-usethis::use_data(cases_deaths_subset, overwrite = TRUE)
+usethis::use_data(cases_deaths_subset_dt, internal = TRUE, overwrite = TRUE)

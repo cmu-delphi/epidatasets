@@ -2,7 +2,6 @@
 library(dplyr)
 library(covidcast)
 library(epidatr)
-library(epiprocess)
 
 d <- as.Date("2024-03-20")
 
@@ -11,7 +10,7 @@ y <- covidcast::county_census %>%
   select(geo_value = FIPS, county_name = CTYNAME, state_name = STNAME)
 
 # Fetch only counties from Massachusetts and Vermont, then append names columns as well
-covid_incidence_county_subset <- pub_covidcast(
+covid_incidence_county_subset_dt <- pub_covidcast(
   source = "jhu-csse",
   signals = "confirmed_incidence_num",
   time_type = "day",
@@ -22,6 +21,6 @@ covid_incidence_county_subset <- pub_covidcast(
 ) %>%
   select(geo_value, time_value, cases = value) %>%
   full_join(y, by = "geo_value") %>%
-  as_epi_df(as_of = d)
+  as_tibble()
 
-usethis::use_data(covid_incidence_county_subset, overwrite = TRUE)
+usethis::use_data(covid_incidence_county_subset_dt, internal = TRUE, overwrite = TRUE)

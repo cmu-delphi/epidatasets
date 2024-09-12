@@ -1,10 +1,9 @@
 library(dplyr)
 library(epidatr)
-library(epiprocess)
 
 d <- as.Date("2021-10-28")
 
-covid_incidence_outliers <- pub_covidcast(
+covid_incidence_outliers_dt <- pub_covidcast(
   source = "jhu-csse",
   signals = "confirmed_incidence_num",
   time_type = "day",
@@ -14,6 +13,6 @@ covid_incidence_outliers <- pub_covidcast(
   as_of = d
 ) %>%
   select(geo_value, time_value, cases = value) %>%
-  as_epi_df(as_of = d)
+  as_tibble()
 
-usethis::use_data(covid_incidence_outliers, overwrite = TRUE)
+usethis::use_data(covid_incidence_outliers_dt, internal = TRUE, overwrite = TRUE)

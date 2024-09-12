@@ -1,6 +1,5 @@
 library(dplyr)
 library(epidatr)
-library(epiprocess)
 
 d <- as.Date("2024-03-20")
 
@@ -26,8 +25,8 @@ y <- pub_covidcast(
 ) %>%
   select(geo_value, time_value, death_rate = value)
 
-covid_case_death_rates <- x %>%
+covid_case_death_rates_dt <- x %>%
   full_join(y, by = c("geo_value", "time_value")) %>%
-  as_epi_df(as_of = d)
+  as_tibble()
 
-usethis::use_data(covid_case_death_rates, overwrite = TRUE)
+usethis::use_data(covid_case_death_rates_dt, internal = TRUE, overwrite = TRUE)

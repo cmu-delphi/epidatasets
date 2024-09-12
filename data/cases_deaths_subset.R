@@ -1,0 +1,8 @@
+delayedAssign("cases_deaths_subset", local({
+  if (requireNamespace("epiprocess", quietly = TRUE)) {
+    d <- as.Date("2024-03-20")
+    epiprocess::as_epi_df(epidatasets:::cases_deaths_subset_dt, as_of = d)
+  } else {
+    epidatasets:::cases_deaths_subset_dt
+  }
+}))

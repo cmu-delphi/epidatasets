@@ -28,9 +28,12 @@ case_rate_subset <- pub_covidcast(
   select(geo_value, time_value, version = issue, case_rate_7d_av = value) %>%
   as_epi_archive(compactify = FALSE)
 
-archive_cases_dv_subset = epix_merge(
+# Use `epiprocess::epix_merge` to avoid having to reimplement `sync`ing
+# behavior. After merging, convert DT component back to tibble.
+archive_cases_dv_subset_dt = epix_merge(
   dv_subset, case_rate_subset,
   sync = "locf",
-  compactify = FALSE)
+  compactify = FALSE)$DT %>%
+  as_tibble()
 
-usethis::use_data(archive_cases_dv_subset, overwrite = TRUE)
+usethis::use_data(archive_cases_dv_subset_dt, internal = TRUE, overwrite = TRUE)

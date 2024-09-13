@@ -19,6 +19,7 @@ Depends:
     R (>= 2.10)
 Suggests: 
     covidcast,
+    data.table,
     dplyr,
     epidatr,
     here,
@@ -27,7 +28,8 @@ Suggests:
     lubridate,
     magrittr,
     purrr,
-    readr
+    readr,
+    tibble
 Enhances:
     epiprocess
 Remotes:

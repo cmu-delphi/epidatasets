@@ -8,9 +8,9 @@
 #'
 #' It is used in the {epiprocess} growth rate and `epi_slide` vignettes.
 #'
-#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4026 rows and 6 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 4026 rows and 6 columns.
 #' @section Data dictionary:
-#' A tibble with columns:
+#' The data has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}
@@ -40,7 +40,7 @@
 #'   averages of the preceding 7 days, so the signal for June 7 is the
 #'   average of the underlying data for June 1 through 7, inclusive.
 #' * Furthermore, the data has been limited to a very small number of rows, the
-#'   signal names slightly altered, and formatted into a tibble.
+#'   signal names slightly altered, and formatted into an `epi_df`.
 "cases_deaths_subset"
 
 #' Subset of daily COVID-19 doctor visits and cases from 6 states in archive format
@@ -52,12 +52,12 @@
 #' June 1, 2020 to December 1, 2021, issued on dates from June 1, 2020 to December 1,
 #' 2021. It is limited to California, Florida, Texas, and New York.
 #'
-#' It is used in the {epiprocess} `compactify`, `epix_archive`, and
-#' advanced-use vignettes.
+#' It is used in the {epiprocess} `compactify`, `epi_archive`, and
+#' advanced-use (`advanced`) vignettes.
 #'
-#' @format An `epi_archive`. The data stored in the DT attribute is an object of class \code{data.table} (inherits from \code{data.frame}) with 129638 rows and 5 columns.
+#' @format An [`epiprocess::epi_archive`]. The DT attribute contains the data formatted as a [`data.table::data.table`] (object of class `c("data.table", "data.frame")`) with 129638 rows and 5 columns.
 #' @section Data dictionary:
-#' An `epi_archive$DT` data format with columns:
+#' The data in the `epi_archive$DT` attribute has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{time_value}{the time value associated with each row of measurements.}
@@ -75,7 +75,7 @@
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits API}: The signal `percent_cli` is taken directly from the API without changes.
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: `case_rate_7d_av` signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
 #' * Furthermore, the data has been limited to a very small number of rows, the
-#'   signal names slightly altered, and formatted into a tibble.
+#'   signal names slightly altered, and formatted into an `epi_archive`.
 "archive_cases_dv_subset"
 
 #' Subset of JHU daily COVID-19 cases from counties in Massachusetts and Vermont
@@ -89,9 +89,9 @@
 #'
 #' It is used in the {epiprocess} aggregation vignette.
 #'
-#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 16212 rows and 5 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 16212 rows and 5 columns.
 #' @section Data dictionary:
-#' A tibble with columns:
+#' The data has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{time_value}{the time value associated with each row of measurements.}
@@ -116,7 +116,7 @@
 #'   June 7 is the average of the underlying data for June 1 through 7,
 #'   inclusive.
 #' * Furthermore, the data has been limited to a very small number of rows,
-#'   formatted into a tibble, and the signal names slightly altered.
+#'   formatted into an `epi_df`, and the signal names slightly altered.
 "covid_incidence_county_subset"
 
 # Epiprocess Vignette Data ----------------------------------------------------
@@ -132,9 +132,9 @@
 #'
 #' This data set is used in the {epiprocess} vignette on outliers.
 #'
-#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 730 rows and 3 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 730 rows and 3 columns.
 #' @section Data dictionary:
-#' A tibble with columns:
+#' The data has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{time_value}{the time value associated with each row of measurements.}
@@ -152,7 +152,7 @@
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
 #'   These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes.
 #' * Furthermore, the data has been limited to a very small number of rows,
-#'   formatted into a tibble, and the signal names slightly altered.
+#'   formatted into an `epi_df`, and the signal names slightly altered.
 "covid_incidence_outliers"
 
 #' Subset of COVID-19 cumulative case counts from 4 states
@@ -165,9 +165,9 @@
 #'
 #' It is used in the {epiprocess} "Getting Started" vignette.
 #'
-#' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2808 rows and 15 columns.
+#' @format A [`tibble::tibble`] (object of class `c("tbl_df", "tbl", "data.frame")`) with 2808 rows and 15 columns.
 #' @section Data dictionary:
-#' A tibble with 2,808 rows and 15 variables:
+#' The data has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row of measurements.}
 #'   \item{signal}{name of metric, derived from upstream data.}

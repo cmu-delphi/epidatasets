@@ -7,9 +7,9 @@
 #' ranges from December 31, 2020 to December 31, 2021. It
 #' includes all states. It is used in the {epiprocess} correlation vignette.
 #'
-#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 37576 rows and 4 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 37576 rows and 4 columns.
 #' @section Data dictionary:
-#' A tibble with columns:
+#' The data has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}
@@ -41,12 +41,12 @@
 #'
 #' Data set on state populations, from the 2019 US Census.
 #'
-#' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 57 rows and 4 columns.
+#' @format A [`tibble::tibble`] (object of class `c("tbl_df", "tbl", "data.frame")`) with 57 rows and 4 columns.
 #' @section Data dictionary:
-#' A data frame containing data for 57 regions, including all states, the United
+#' The data includes 57 regions (all US states, the United
 #'   States as a whole, the District of Columbia, Puerto Rico Commonwealth,
 #'   American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana
-#'   Islands, with columns:
+#'   Islands) with columns:
 #'
 #' \describe{
 #'   \item{fips}{FIPS code}
@@ -73,9 +73,9 @@
 #' ranges from June 4, 2021 to December 31, 2021.
 #' It is limited to California, Florida, Texas, New Jersey, and New York.
 #'
-#' @format An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
+#' @format A [`tibble::tibble`] (object of class `c("tbl_df", "tbl", "data.frame")`) with 1055 rows and 4 columns.
 #' @section Data dictionary:
-#' A tibble with columns:
+#' The data has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}
@@ -108,9 +108,9 @@
 #' ranges from June 4, 2021 to December 31, 2021. It
 #' is limited to California, Florida, Texas, New Jersey, and New York.
 #'
-#' @format An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 1055 rows and 4 columns.
 #' @section Data dictionary:
-#' A tibble with columns:
+#' The data has columns:
 #' \describe{
 #'   \item{geo_value}{the geographic value associated with each row
 #'       of measurements.}
@@ -143,9 +143,9 @@
 #' 1, 2021 covering the period from April 2, 2020 to December 1, 2021. It is
 #' used in the epipredict slide vignette.
 #'
-#' @format An `epi_archive`. The data stored in the DT attribute is an object of class \code{data.table} (inherits from \code{data.frame}) with 65299 rows and 4 columns.
+#' @format An [`epiprocess::epi_archive`]. The DT attribute contains the data formatted as a [`data.table::data.table`] (object of class `c("data.table", "data.frame")`) with 65299 rows and 4 columns.
 #' @section Data dictionary:
-#' An `epi_archive$DT` data format with columns:
+#' The data in the `epi_archive$DT` attribute has columns:
 #' \describe{
 #'   \item{version}{the time value specifying the version for each row of measurements.}
 #'   \item{geo_value}{the province or territory associated with each row of measurements.}

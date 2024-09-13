@@ -143,6 +143,15 @@
 #' 1, 2021 covering the period from April 2, 2020 to December 1, 2021. It is
 #' used in the epipredict slide vignette.
 #'
+#' @format An `epi_archive`. The data stored in the DT attribute is an object of class \code{data.table} (inherits from \code{data.frame}) with 65299 rows and 4 columns.
+#' @section Data dictionary:
+#' An `epi_archive$DT` data format with columns:
+#' \describe{
+#'   \item{version}{the time value specifying the version for each row of measurements.}
+#'   \item{geo_value}{the province or territory associated with each row of measurements.}
+#'   \item{time_value}{the time value associated with each row of measurements.}
+#'   \item{case_rate}{number of new confirmed cases due to COVID-19 per 100,000 population, daily}
+#' }
 #' @source This object contains a modified part of the COVID-19 Canada Open
 #' Data Working Group's
 #' \href{https://github.com/ccodwg/Covid19Canada}{Covid19Canada data repository} (archived).

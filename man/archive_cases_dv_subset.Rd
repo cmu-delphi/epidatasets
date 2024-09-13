@@ -43,7 +43,7 @@ An \code{epi_archive$DT} data format with columns:
 \item{time_value}{the time value associated with each row of measurements.}
 \item{version}{the time value specifying the version for each row of measurements. }
 \item{percent_cli}{percentage of doctor’s visits with CLI (COVID-like illness) computed from medical insurance claims}
-\item{case_rate_7d_av}{7-day average signal of number of new confirmed deaths due to COVID-19 per 100,000 population, daily}
+\item{case_rate_7d_av}{7-day average signal of number of new confirmed cases due to COVID-19 per 100,000 population, daily}
 }
 }
 

@@ -5,7 +5,7 @@
 \alias{can_prov_cases}
 \title{Canadian COVID-19 case rates}
 \format{
-An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 65299 rows and 4 columns.
+An \code{epi_archive}. The data stored in the DT attribute is an object of class \code{data.table} (inherits from \code{data.frame}) with 65299 rows and 4 columns.
 }
 \source{
 This object contains a modified part of the COVID-19 Canada Open
@@ -36,4 +36,15 @@ This dataset contains versioned data snapshots from February 1, 2021 to December
 1, 2021 covering the period from April 2, 2020 to December 1, 2021. It is
 used in the epipredict slide vignette.
 }
+\section{Data dictionary}{
+
+An \code{epi_archive$DT} data format with columns:
+\describe{
+\item{version}{the time value specifying the version for each row of measurements.}
+\item{geo_value}{the province or territory associated with each row of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{case_rate}{number of new confirmed cases due to COVID-19 per 100,000 population, daily}
+}
+}
+
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{state_census}
 \title{State population data}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 57 rows and 4 columns.
+A \code{\link[tibble:tibble]{tibble::tibble}} (object of class \code{c("tbl_df", "tbl", "data.frame")}) with 57 rows and 4 columns.
 }
 \source{
 United States Census Bureau, Population Division, at
@@ -22,10 +22,10 @@ Data set on state populations, from the 2019 US Census.
 }
 \section{Data dictionary}{
 
-A data frame containing data for 57 regions, including all states, the United
+The data includes 57 regions (all US states, the United
 States as a whole, the District of Columbia, Puerto Rico Commonwealth,
 American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana
-Islands, with columns:
+Islands) with columns:
 
 \describe{
 \item{fips}{FIPS code}

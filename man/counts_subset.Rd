@@ -5,7 +5,7 @@
 \alias{counts_subset}
 \title{Subset of COVID-19 incident cases and deaths from 5 states}
 \format{
-An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 1055 rows and 4 columns.
 }
 \source{
 This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University}
@@ -27,7 +27,7 @@ is limited to California, Florida, Texas, New Jersey, and New York.
 }
 \section{Data dictionary}{
 
-A tibble with columns:
+The data has columns:
 \describe{
 \item{geo_value}{the geographic value associated with each row
 of measurements.}

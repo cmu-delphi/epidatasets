@@ -5,7 +5,7 @@
 \alias{can_prov_cases}
 \title{Canadian COVID-19 case rates}
 \format{
-An \code{epi_archive}. The data stored in the DT attribute is an object of class \code{data.table} (inherits from \code{data.frame}) with 65299 rows and 4 columns.
+An \code{\link[epiprocess:epi_archive]{epiprocess::epi_archive}}. The DT attribute contains the data formatted as a \code{\link[data.table:data.table]{data.table::data.table}} (object of class \code{c("data.table", "data.frame")}) with 65299 rows and 4 columns.
 }
 \source{
 This object contains a modified part of the COVID-19 Canada Open
@@ -38,7 +38,7 @@ used in the epipredict slide vignette.
 }
 \section{Data dictionary}{
 
-An \code{epi_archive$DT} data format with columns:
+The data in the \code{epi_archive$DT} attribute has columns:
 \describe{
 \item{version}{the time value specifying the version for each row of measurements.}
 \item{geo_value}{the province or territory associated with each row of measurements.}

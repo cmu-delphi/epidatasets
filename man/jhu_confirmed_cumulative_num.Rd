@@ -5,7 +5,7 @@
 \alias{jhu_confirmed_cumulative_num}
 \title{Subset of COVID-19 cumulative case counts from 4 states}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2808 rows and 15 columns.
+A \code{\link[tibble:tibble]{tibble::tibble}} (object of class \code{c("tbl_df", "tbl", "data.frame")}) with 2808 rows and 15 columns.
 }
 \source{
 This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
@@ -27,7 +27,7 @@ It is used in the {epiprocess} "Getting Started" vignette.
 }
 \section{Data dictionary}{
 
-A tibble with 2,808 rows and 15 variables:
+The data has columns:
 \describe{
 \item{geo_value}{the geographic value associated with each row of measurements.}
 \item{signal}{name of metric, derived from upstream data.}

@@ -5,7 +5,7 @@
 \alias{archive_cases_dv_subset}
 \title{Subset of daily COVID-19 doctor visits and cases from 6 states in archive format}
 \format{
-An \code{epi_archive}. The data stored in the DT attribute is an object of class \code{data.table} (inherits from \code{data.frame}) with 129638 rows and 5 columns.
+An \code{\link[epiprocess:epi_archive]{epiprocess::epi_archive}}. The DT attribute contains the data formatted as a \code{\link[data.table:data.table]{data.table::data.table}} (object of class \code{c("data.table", "data.frame")}) with 129638 rows and 5 columns.
 }
 \source{
 This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
@@ -18,7 +18,7 @@ Modifications:
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits API}: The signal \code{percent_cli} is taken directly from the API without changes.
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: \code{case_rate_7d_av} signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
 \item Furthermore, the data has been limited to a very small number of rows, the
-signal names slightly altered, and formatted into a tibble.
+signal names slightly altered, and formatted into an \code{epi_archive}.
 }
 }
 \usage{
@@ -32,12 +32,12 @@ and Engineering at Johns Hopkins University. This example data ranges from
 June 1, 2020 to December 1, 2021, issued on dates from June 1, 2020 to December 1,
 2021. It is limited to California, Florida, Texas, and New York.
 
-It is used in the {epiprocess} \code{compactify}, \code{epix_archive}, and
-advanced-use vignettes.
+It is used in the {epiprocess} \code{compactify}, \code{epi_archive}, and
+advanced-use (\code{advanced}) vignettes.
 }
 \section{Data dictionary}{
 
-An \code{epi_archive$DT} data format with columns:
+The data in the \code{epi_archive$DT} attribute has columns:
 \describe{
 \item{geo_value}{the geographic value associated with each row of measurements.}
 \item{time_value}{the time value associated with each row of measurements.}

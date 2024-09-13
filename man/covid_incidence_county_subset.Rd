@@ -5,7 +5,7 @@
 \alias{covid_incidence_county_subset}
 \title{Subset of JHU daily COVID-19 cases from counties in Massachusetts and Vermont}
 \format{
-An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 16212 rows and 5 columns.
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 16212 rows and 5 columns.
 }
 \source{
 This object contains a modified part of the
@@ -26,7 +26,7 @@ as moving averages of the preceding 7 days, so the signal for
 June 7 is the average of the underlying data for June 1 through 7,
 inclusive.
 \item Furthermore, the data has been limited to a very small number of rows,
-formatted into a tibble, and the signal names slightly altered.
+formatted into an \code{epi_df}, and the signal names slightly altered.
 }
 }
 \usage{
@@ -44,7 +44,7 @@ It is used in the {epiprocess} aggregation vignette.
 }
 \section{Data dictionary}{
 
-A tibble with columns:
+The data has columns:
 \describe{
 \item{geo_value}{the geographic value associated with each row of measurements.}
 \item{time_value}{the time value associated with each row of measurements.}

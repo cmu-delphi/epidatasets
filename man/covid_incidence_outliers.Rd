@@ -5,7 +5,7 @@
 \alias{covid_incidence_outliers}
 \title{Subset of JHU daily COVID-19 cases from New Jersey and Florida}
 \format{
-An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 730 rows and 3 columns.
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 730 rows and 3 columns.
 }
 \source{
 This object contains a modified part of the
@@ -21,7 +21,7 @@ Modifications:
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
 These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes.
 \item Furthermore, the data has been limited to a very small number of rows,
-formatted into a tibble, and the signal names slightly altered.
+formatted into an \code{epi_df}, and the signal names slightly altered.
 }
 }
 \usage{
@@ -39,7 +39,7 @@ This data set is used in the {epiprocess} vignette on outliers.
 }
 \section{Data dictionary}{
 
-A tibble with columns:
+The data has columns:
 \describe{
 \item{geo_value}{the geographic value associated with each row of measurements.}
 \item{time_value}{the time value associated with each row of measurements.}

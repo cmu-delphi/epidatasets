@@ -5,7 +5,7 @@
 \alias{ctis_covid_behaviours}
 \title{Subset of CTIS COVID-19-related behaviours from 5 states}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1055 rows and 4 columns.
+A \code{\link[tibble:tibble]{tibble::tibble}} (object of class \code{c("tbl_df", "tbl", "data.frame")}) with 1055 rows and 4 columns.
 }
 \source{
 Data from Delphi COVIDcast. Obtained via the Delphi Epidata API.
@@ -37,7 +37,7 @@ It is limited to California, Florida, Texas, New Jersey, and New York.
 }
 \section{Data dictionary}{
 
-A tibble with columns:
+The data has columns:
 \describe{
 \item{geo_value}{the geographic value associated with each row
 of measurements.}

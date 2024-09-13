@@ -6,6 +6,7 @@ library(purrr)
 library(httr)
 library(jsonlite)
 
+source(here::here("data-raw/_helper.R"))
 
 # Look for a GitHub API token.
 # Returns an empty string "" if env variable not found.
@@ -145,4 +146,9 @@ can_prov_cases_dt <- can_prov_cases_dt %>% bind_rows(.id = "version") %>%
   arrange(version) %>%
   as_tibble()
 
-usethis::use_data(can_prov_cases_dt, internal = TRUE, overwrite = TRUE)
+# We're trying to do:
+#   usethis::use_data(can_prov_cases_dt, internal = TRUE, overwrite = TRUE)
+# but `usethis::use_data` can only store multiple objects if they're added in
+# the same call. This workaround is from
+# https://github.com/r-lib/usethis/issues/1512
+save_to_sysdata(can_prov_cases_dt, "can_prov_cases_dt")

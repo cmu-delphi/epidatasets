@@ -2,6 +2,8 @@ library(dplyr)
 library(epidatr)
 library(epiprocess)
 
+source(here::here("data-raw/_helper.R"))
+
 dv_subset <- pub_covidcast(
   source = "doctor-visits",
   signals = "smoothed_adj_cli",
@@ -36,4 +38,9 @@ archive_cases_dv_subset_dt = epix_merge(
   compactify = FALSE)$DT %>%
   as_tibble()
 
-usethis::use_data(archive_cases_dv_subset_dt, internal = TRUE, overwrite = TRUE)
+# We're trying to do:
+#   usethis::use_data(archive_cases_dv_subset_dt, internal = TRUE, overwrite = TRUE)
+# but `usethis::use_data` can only store multiple objects if they're added in
+# the same call. This workaround is from
+# https://github.com/r-lib/usethis/issues/1512
+save_to_sysdata(archive_cases_dv_subset_dt, "archive_cases_dv_subset_dt")

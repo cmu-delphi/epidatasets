@@ -3,6 +3,8 @@ library(dplyr)
 library(covidcast)
 library(epidatr)
 
+source(here::here("data-raw/_helper.R"))
+
 d <- as.Date("2024-03-20")
 
 y <- covidcast::county_census %>%
@@ -23,4 +25,9 @@ covid_incidence_county_subset_dt <- pub_covidcast(
   full_join(y, by = "geo_value") %>%
   as_tibble()
 
-usethis::use_data(covid_incidence_county_subset_dt, internal = TRUE, overwrite = TRUE)
+# We're trying to do:
+#   usethis::use_data(covid_incidence_county_subset_dt, internal = TRUE, overwrite = TRUE)
+# but `usethis::use_data` can only store multiple objects if they're added in
+# the same call. This workaround is from
+# https://github.com/r-lib/usethis/issues/1512
+save_to_sysdata(covid_incidence_county_subset_dt, "covid_incidence_county_subset_dt")

@@ -49,7 +49,7 @@
 #'   Islands) with columns:
 #'
 #' \describe{
-#'   \item{fips}{FIPS code}
+#'   \item{fips}{2-digit FIPS code}
 #'   \item{name}{Full name of the state or territory}
 #'   \item{pop}{Estimate of the location's resident population in
 #'      2019.}

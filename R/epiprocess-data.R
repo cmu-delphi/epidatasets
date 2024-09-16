@@ -180,9 +180,9 @@
 #'   \item{missing_value}{an integer code that is zero when the value field is present and non-zero when the data is missing (see \href{https://cmu-delphi.github.io/delphi-epidata/api/missing_codes.html}{missing codes}).}
 #'   \item{missing_stderr}{an integer code that is zero when the stderr field is present and non-zero when the data is missing (see \href{https://cmu-delphi.github.io/delphi-epidata/api/missing_codes.html}{missing codes}).}
 #'   \item{missing_sample_size}{an integer code that is zero when the sample_size field is present and non-zero when the data is missing (see \href{https://cmu-delphi.github.io/delphi-epidata/api/missing_codes.html}{missing codes}).}
-#'   \item{value}{Cumulative number of confirmed COVID-19 cases, derived from the underlying data source.}
-#'   \item{stderr}{approximate standard error of the statistic with respect to its sampling distribution, null when not applicable.}
-#'   \item{sample_size}{number of “data points” used in computing the statistic, null when not applicable.}
+#'   \item{value}{cumulative number of confirmed COVID-19 cases, derived from the underlying data source.}
+#'   \item{stderr}{approximate standard error of the statistic with respect to its sampling distribution, NA when not applicable.}
+#'   \item{sample_size}{number of “data points” used in computing the statistic, NA when not applicable.}
 #' }
 #' @source This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}

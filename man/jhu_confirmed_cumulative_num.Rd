@@ -35,15 +35,14 @@ The data has columns:
 \item{geo_type}{spatial resolution of the signal.}
 \item{time_type}{temporal resolution of the signal.}
 \item{time_value}{the time value associated with each row of measurements.}
-\item{direction}{trend classifier (+1 -> increasing, 0 -> steady or not determined, -1 -> decreasing).}
 \item{issue}{time unit (e.g., date) when the signal data were published.}
 \item{lag}{time delta (e.g. days) between when the underlying events happened and when the data were published.}
 \item{missing_value}{an integer code that is zero when the value field is present and non-zero when the data is missing (see \href{https://cmu-delphi.github.io/delphi-epidata/api/missing_codes.html}{missing codes}).}
 \item{missing_stderr}{an integer code that is zero when the stderr field is present and non-zero when the data is missing (see \href{https://cmu-delphi.github.io/delphi-epidata/api/missing_codes.html}{missing codes}).}
 \item{missing_sample_size}{an integer code that is zero when the sample_size field is present and non-zero when the data is missing (see \href{https://cmu-delphi.github.io/delphi-epidata/api/missing_codes.html}{missing codes}).}
-\item{value}{Cumulative number of confirmed COVID-19 cases, derived from the underlying data source.}
-\item{stderr}{approximate standard error of the statistic with respect to its sampling distribution, null when not applicable.}
-\item{sample_size}{number of “data points” used in computing the statistic, null when not applicable.}
+\item{value}{cumulative number of confirmed COVID-19 cases, derived from the underlying data source.}
+\item{stderr}{approximate standard error of the statistic with respect to its sampling distribution, NA when not applicable.}
+\item{sample_size}{number of “data points” used in computing the statistic, NA when not applicable.}
 }
 }
 

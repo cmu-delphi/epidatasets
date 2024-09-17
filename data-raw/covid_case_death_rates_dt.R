@@ -10,7 +10,7 @@ x <- pub_covidcast(
   signals = "confirmed_7dav_incidence_prop",
   time_type = "day",
   geo_type = "state",
-  time_values = epirange(20200301, 20211231),
+  time_values = epirange(20201201, 20211231),
   geo_values = "*",
   as_of = d
 ) %>%
@@ -21,7 +21,7 @@ y <- pub_covidcast(
   signals = "deaths_7dav_incidence_prop",
   time_type = "day",
   geo_type = "state",
-  time_values = epirange(20200301, 20211231),
+  time_values = epirange(20201201, 20211231),
   geo_values = "*",
   as_of = d
 ) %>%

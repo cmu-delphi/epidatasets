@@ -5,7 +5,7 @@
 \alias{ctis_covid_behaviours}
 \title{Subset of CTIS COVID-19-related behaviours from 5 states}
 \format{
-A \code{\link[tibble:tibble]{tibble::tibble}} (object of class \code{c("tbl_df", "tbl", "data.frame")}) with 1055 rows and 4 columns.
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 1055 rows and 4 columns.
 }
 \source{
 Data from Delphi COVIDcast. Obtained via the Delphi Epidata API.

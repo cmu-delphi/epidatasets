@@ -16,6 +16,19 @@ This data set is licensed under the terms of the
 by the COVID-19 Canada Open Data Working Group. The COVID-19 Canada Open
 Data Working Group collected the data from publicly available sources such
 as government datasets and news releases.
+
+Modifications:
+\itemize{
+\item The case rate signal are calculated using the case count taken directly from the CCODWG
+\href{https://github.com/ccodwg/Covid19Canada}{ccodwg/Covid19Canada GitHub repository}
+and population data.
+\item Furthermore, the data has been limited to a very small number of rows, the
+signal names slightly altered, some province names replaced with abbreviations, and
+formatted into an \code{epi_archive}.
+}
+
+The populatin data used (but not included in the dataset itself) is from the
+\href{https://github.com/mountainMath/BCCovidSnippets/}{mountainMath/BCCovidSnippets GitHub repository}.
 }
 \usage{
 can_prov_cases

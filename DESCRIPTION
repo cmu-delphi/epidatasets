@@ -7,8 +7,9 @@ Authors@R: c(
     person("Nat", "DeFries", email="ndefries@andrew.cmu.edu", role = c("cre", "aut")),
     person("Johns Hopkins University Center for Systems Science and Engineering", role = "dtc", comment = "Owner of COVID-19 cases and deaths data from the COVID-19 Data Repository"),
     person("Johns Hopkins University", role = "cph", comment = "Copyright holder of COVID-19 cases and deaths data from the COVID-19 Data Repository"),
-    person("Carnegie Mellon University Delphi Group", role = "dtc", comment = "Owner of masking and social-distancing data from the COVID-19 Trends and Impacts Survey. Owner of claims-based CLI data from the `doctor-visits` API signal."),
-    person("The COVID-19 Canada Open Data Working Group", role = "dtc", comment = "Owner of Canadian COVID-19 cases rates from the Covid19Canada data repository")
+    person("Carnegie Mellon University Delphi Group", role = "dtc", comment = "Owner of masking and social-distancing data from the COVID-19 Trends and Impacts Survey. Owner of claims-based CLI data from the Delphi Epidata API"),
+    person("The COVID-19 Canada Open Data Working Group", role = "dtc", comment = "Owner of Canadian COVID-19 cases rates from the Covid19Canada data repository"),
+    person("Statistics Canada", role = "dtc", comment = "Owner of Canadian graduate employment income data from the Statistics Canada website")
   )
 Description: This package contains data sets used to compile vignettes and
     other documentation in Delphi R Packages. The goal is to avoid calls

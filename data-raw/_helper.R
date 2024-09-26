@@ -7,10 +7,9 @@ save_to_sysdata <- function(obj, obj_name) {
   sysdata_env <- new.env(hash = FALSE)
 
   # Load current internal data into this new environment
-  if(!file.exists(internal_data_path)) {
-    file.create(internal_data_path)
+  if(file.exists(internal_data_path)) {
+    load(internal_data_path, envir = sysdata_env)
   }
-  load(internal_data_path, envir = sysdata_env)
 
   # Add or replace the object
   sysdata_env[[obj_name]] <- obj

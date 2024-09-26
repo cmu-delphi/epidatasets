@@ -32,7 +32,7 @@ covid_case_death_rates_dt <- x %>%
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(covid_case_death_rates_dt, internal = TRUE, overwrite = TRUE)
+#   usethis::use_data(covid_case_death_rates_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512

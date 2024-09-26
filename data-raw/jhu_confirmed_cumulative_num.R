@@ -15,4 +15,4 @@ jhu_confirmed_cumulative_num <- pub_covidcast(
   select(-direction) %>%
   as_tibble()
 
-usethis::use_data(jhu_confirmed_cumulative_num, overwrite = TRUE)
+usethis::use_data(jhu_confirmed_cumulative_num, overwrite = TRUE, compress = "xz")

@@ -29,4 +29,4 @@ ctis_covid_behaviours <- behav_ind_mask %>%
   full_join(behav_ind_distancing, by = c("geo_value", "time_value")) %>%
   as_tibble()
 
-usethis::use_data(ctis_covid_behaviours, overwrite = TRUE)
+usethis::use_data(ctis_covid_behaviours, overwrite = TRUE, compress = "xz")

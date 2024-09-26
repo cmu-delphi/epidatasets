@@ -8,4 +8,4 @@ state_census <- covidcast::state_census %>%
   mutate(abbr = tolower(abbr), fips = sprintf("%02d", fips)) %>%
   as_tibble()
 
-usethis::use_data(state_census, overwrite = TRUE)
+usethis::use_data(state_census, overwrite = TRUE, compress = "xz")

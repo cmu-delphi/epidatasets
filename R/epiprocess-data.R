@@ -72,8 +72,21 @@
 #' Copyright Johns Hopkins University 2020.
 #'
 #' Modifications:
-#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits API}: The signal `percent_cli` is taken directly from the API without changes.
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: `case_rate_7d_av` signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+#' * Furthermore, the data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_archive`.
+#'
+#' This object contains a modified part of the
+#' \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{Delphi `doctor-visits` indicator}
+#' . This data source is computed by the Delphi
+#' Group from information about outpatient visits, provided to Delphi by
+#' health system partners, and published in the COVIDcast Epidata API. This
+#' data set is licensed under the terms of the
+#' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+#' by the Delphi group.
+#'
+#' Modifications:
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits signal}: The signal `smoothed_adj_cli` is taken directly from the API without changes.
 #' * Furthermore, the data has been limited to a very small number of rows, the
 #'   signal names slightly altered, and formatted into an `epi_archive`.
 "archive_cases_dv_subset"
@@ -85,7 +98,7 @@
 #' Systems Science and Engineering at Johns Hopkins University.
 #' This example data is a snapshot as of March 20, 2024, and
 #' ranges from March 1, 2020 to December 31, 2021.
-#' It is limited to Massachusetts and Vermont.
+#' It is limited to counties from Massachusetts and Vermont.
 #'
 #' It is used in the {epiprocess} aggregation vignette.
 #'
@@ -188,4 +201,10 @@
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
 #' by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
 #' Copyright Johns Hopkins University 2020.
+#'
+#' Modifications:
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
+#'   These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes.
+#' * Furthermore, the data has been limited to a very small number of rows,
+#'   formatted into an `epi_df`, and the signal names slightly altered.
 "jhu_confirmed_cumulative_num"

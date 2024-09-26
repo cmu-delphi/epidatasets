@@ -63,7 +63,7 @@ cases_deaths_subset_dt <- confirmed_7dav_incidence_prop %>%
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(cases_deaths_subset_dt, internal = TRUE, overwrite = TRUE)
+#   usethis::use_data(cases_deaths_subset_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512

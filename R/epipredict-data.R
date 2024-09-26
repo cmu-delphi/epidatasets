@@ -56,11 +56,14 @@
 #'   \item{abbr}{Postal abbreviation for the location}
 #' }
 #'
-#' @source United States Census Bureau, Population Division, at
+#' @source
+#'   This object is derived from several datasets from the United States
+#'   Census Bureau, Population Division, at
 #'   \url{https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf},
 #'   \url{https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html},
-#'   and \url{https://www.census.gov/data/tables/2010/dec/2010-island-areas.html}
-#'   This data is public domain.
+#'    and \url{https://www.census.gov/data/tables/2010/dec/2010-island-areas.html}.
+#'    It is made available through the `covidcast` package. This data is
+#'    public domain.
 "state_census"
 
 # Epipredict Vignette Data ----------------------------------------------------
@@ -84,20 +87,23 @@
 #'   \item{distancting}{Estimated percentage of respondents who reported that all or most people they enountered in public in the past 7 days maintained a distance of at least 6 feet. Respondents who said that they have not been in public for the past 7 days are excluded.}
 #' }
 #'
-#' @source Data from Delphi COVIDcast. Obtained via the Delphi Epidata API.
-#'   \url{https://cmu-delphi.github.io/delphi-epidata/api/covidcast.html}. This
-#'   object contains a modified part of the
+#' @source
+#'   This object contains a modified part of the
 #'   \href{https://cmu-delphi.github.io/delphi-epidata/symptom-survey/#covid-19-trends-and-impact-survey}{data
 #'   aggregations in the API} that are prepared from the
 #'   \href{https://www.pnas.org/doi/full/10.1073/pnas.2111454118}{COVID-19
 #'   Trends and Impact Survey}; see the first link for more information on
-#'   citing in publications. These aggregations are licensed under the terms of
+#'   citing in publications.
+#'   The data is made available via the
+#'   \href{https://cmu-delphi.github.io/delphi-epidata/}{Delphi Epidata API}.
+#'
+#'   These aggregations are licensed under the terms of
 #'   the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
 #'   Attribution license}.
 #'
 #' Modifications:
-#' * Selected a small subset of the available data.
-#' * Changed to wide format.
+#' * The data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
 "ctis_covid_behaviours"
 
 #' Subset of COVID-19 incident cases and deaths from 5 states
@@ -125,6 +131,14 @@
 #' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
 #' by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
 #' Copyright Johns Hopkins University 2020.
+#'
+#' Modifications:
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
+#'   The signals are taken directly from the JHU CSSE
+#'   \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository}
+#'   without changes.
+#' * Furthermore, the data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
 "counts_subset"
 
 #' Canadian COVID-19 case rates
@@ -160,6 +174,17 @@
 #' by the COVID-19 Canada Open Data Working Group. The COVID-19 Canada Open
 #' Data Working Group collected the data from publicly available sources such
 #' as government datasets and news releases.
+#'
+#' Modifications:
+#' * The case rate signal are calculated using the case count taken directly from the CCODWG
+#'   \href{https://github.com/ccodwg/Covid19Canada}{ccodwg/Covid19Canada GitHub repository}
+#'   and population data.
+#' * Furthermore, the data has been limited to a very small number of rows, the
+#'   signal names slightly altered, some province names replaced with abbreviations, and
+#'   formatted into an `epi_archive`.
+#'
+#' The populatin data used (but not included in the dataset itself) is from the
+#' \href{https://github.com/mountainMath/BCCovidSnippets/}{mountainMath/BCCovidSnippets GitHub repository}.
 "can_prov_cases"
 
 #' Subset of Statistics Canada median employment income for postsecondary graduates

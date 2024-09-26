@@ -15,7 +15,10 @@ save_to_sysdata <- function(obj, obj_name) {
   sysdata_env[[obj_name]] <- obj
 
   # Save the environment back to the internal package datafile
-  save(list = names(sysdata_env),
+  save(
+    list = names(sysdata_env),
     file = internal_data_path,
-    envir = sysdata_env)
+    envir = sysdata_env,
+    compress = "xz"
+  )
 }

@@ -42,7 +42,7 @@ archive_cases_dv_subset_all_states_dt = epix_merge(
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(archive_cases_dv_subset_all_states_dt, internal = TRUE, overwrite = TRUE)
+#   usethis::use_data(archive_cases_dv_subset_all_states_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512

@@ -195,7 +195,7 @@
 #' www.statcan.gc.ca. This example data is a snapshot as of September 18,
 #' 2024, and ranges from 2010 to 2017 (yearly).
 #'
-#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 10193 rows and 8 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 1445 rows and 7 columns.
 #' @section Data dictionary:
 #' The data has columns:
 #' \describe{
@@ -203,7 +203,6 @@
 #'      row of measurements.}
 #'   \item{time_value}{The time value, a year integer in YYYY format}
 #'   \item{edu_qual}{The education qualification}
-#'   \item{fos}{The field of study}
 #'   \item{age_group}{The age group; either 15 to 34 or 35 to 64}
 #'   \item{num_graduates}{The number of graduates for the given row of characteristics}
 #'   \item{med_income_2y}{The median employment income two years after graduation}
@@ -222,7 +221,7 @@
 #'
 #' Modifications:
 #' * Only provincial and territorial regions are kept
-#' * Only age group, field of study, and educational qualification are kept as
+#' * Only age group and educational qualification are kept as
 #'   covariates. For the remaining covariates, we keep aggregated values and
 #'   drop the level-specific rows.
 #' * No modifications were made to the time range of the data
@@ -236,13 +235,17 @@
 #' reported by JHU CSSE. This example data is a snapshot as of September 21,
 #' 2020, and ranges from April 11, 2020 to September 01, 2020.
 #'
-#' The reference sign is based on reports made available
+#' The reference signal `case` is based on reports made available
 #' by the Center for Systems Science and Engineering at Johns Hopkins
 #' University.
 #'
-#' One survey is ... Google
+#' One survey was
+#' \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/google-survey.html}{run by Google},
+#' in partnership with Delphi.
 #'
-#' One survey is ... CTIS in collaboration with Facebook.
+#' The other survey, the
+#'\href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/fb-survey.html}{COVID-19 Trends and Impact Survey},
+#' was run by Delphi in collaboration with Facebook.
 #'
 #' Data is reported for counties that had at least 200 cumulative COVID-19 cases
 #' on May 14, 2020, according to JHU CSSE.
@@ -254,18 +257,47 @@
 #'   \item{geo_value}{The 5-digit county FIPS code associated with each
 #'      row of measurements.}
 #'   \item{time_value}{The time value, a date in YYYY-MM-DD format}
-#'   \item{goog}{Seven-day average of CLI (covid-like-illness) cases}
-#'   \item{fb}{Seven-day average of CLI (covid-like-illness) cases}
-#'   \item{case}{Seven-day average of CLI (covid-like-illness) cases}
+#'   \item{goog}{Seven-day average of CLI (covid-like-illness) cases from the Google survey}
+#'   \item{fb}{Seven-day average of CLI (covid-like-illness) cases from CTIS}
+#'   \item{case}{Reference signal. Seven-day average of CLI (covid-like-illness) cases}
 #' }
-#' @source This object contains modified data adapted from
-#'  ...
-#'
-#' The data is licensed under the terms of the
-#' \href{url}{name}.
+#' @source
+#' This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+#' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+#' by Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
+#' Copyright Johns Hopkins University 2020.
 #'
 #' Modifications:
-#' *
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:  The signal `confirmed_cumulative_num` was used to determine eligibility for inclusion. The signal `confirmed_7dav_incidence_prop` was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+#' * Furthermore, the data has been limited to a specific time range, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
+#'
+#' This object contains a modified part of the
+#' \href{https://cmu-delphi.github.io/delphi-epidata/symptom-survey/#covid-19-trends-and-impact-survey}{data
+#' aggregations in the API} that are prepared from the
+#' \href{https://www.pnas.org/doi/full/10.1073/pnas.2111454118}{COVID-19
+#' Trends and Impact Survey}; see the first link for more information on
+#' citing in publications.
+#' The data is made available via the
+#' \href{https://cmu-delphi.github.io/delphi-epidata/}{Delphi Epidata API}.
+#'
+#' These aggregations are licensed under the terms of
+#' the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+#' Attribution license}.
+#'
+#' Modifications:
+#' * The data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
+#'
+#' This object contains a modified part of the
+#' \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/google-survey.html}{Google symptom surveys}.
+#' Aggregations based on the survey are licensed under the terms of
+#' the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+#' Attribution license}.
+#'
+#' Modifications:
+#' * The data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
 "county_smoothed_cli_comparison"
 
 #' Daily COVID-19 case and death rates from all states in archive format
@@ -299,7 +331,7 @@
 #'
 #' Modifications:
 #' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:  The signals `case_rate` and `death_rate` are taken directly from the JHU CSSE GitHub repo without changes, served through the Delphi API.
-#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: `case_rate_7d_av` signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: Averaged signals were computed from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
 #' * Furthermore, the data has been limited to a specific time range, the
 #'   signal names slightly altered, and formatted into an `epi_archive`.
 "case_death_rate_archive"

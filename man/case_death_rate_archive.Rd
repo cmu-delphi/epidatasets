@@ -16,7 +16,7 @@ Copyright Johns Hopkins University 2020.
 Modifications:
 \itemize{
 \item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:  The signals \code{case_rate} and \code{death_rate} are taken directly from the JHU CSSE GitHub repo without changes, served through the Delphi API.
-\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: \code{case_rate_7d_av} signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: Averaged signals were computed from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
 \item Furthermore, the data has been limited to a specific time range, the
 signal names slightly altered, and formatted into an \code{epi_archive}.
 }

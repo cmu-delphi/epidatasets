@@ -8,14 +8,48 @@
 An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 63840 rows and 5 columns.
 }
 \source{
-This object contains modified data adapted from
-...
-
-The data is licensed under the terms of the
-\href{url}{name}.
+This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+\href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+by Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
+Copyright Johns Hopkins University 2020.
 
 Modifications:
-*
+\itemize{
+\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:  The signal \code{confirmed_cumulative_num} was used to determine eligibility for inclusion. The signal \code{confirmed_7dav_incidence_prop} was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+\item Furthermore, the data has been limited to a specific time range, the
+signal names slightly altered, and formatted into an \code{epi_df}.
+}
+
+This object contains a modified part of the
+\href{https://cmu-delphi.github.io/delphi-epidata/symptom-survey/#covid-19-trends-and-impact-survey}{data
+aggregations in the API} that are prepared from the
+\href{https://www.pnas.org/doi/full/10.1073/pnas.2111454118}{COVID-19
+Trends and Impact Survey}; see the first link for more information on
+citing in publications.
+The data is made available via the
+\href{https://cmu-delphi.github.io/delphi-epidata/}{Delphi Epidata API}.
+
+These aggregations are licensed under the terms of
+the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+Attribution license}.
+
+Modifications:
+\itemize{
+\item The data has been limited to a very small number of rows, the
+signal names slightly altered, and formatted into an \code{epi_df}.
+}
+
+This object contains a modified part of the
+\href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/google-survey.html}{Google symptom surveys}.
+Aggregations based on the survey are licensed under the terms of
+the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+Attribution license}.
+
+Modifications:
+\itemize{
+\item The data has been limited to a very small number of rows, the
+signal names slightly altered, and formatted into an \code{epi_df}.
+}
 }
 \usage{
 county_smoothed_cli_comparison
@@ -26,13 +60,17 @@ Data set for more than 400 US counties containing CLI
 reported by JHU CSSE. This example data is a snapshot as of September 21,
 2020, and ranges from April 11, 2020 to September 01, 2020.
 
-The reference sign is based on reports made available
+The reference signal \code{case} is based on reports made available
 by the Center for Systems Science and Engineering at Johns Hopkins
 University.
 
-One survey is ... Google
+One survey was
+\href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/google-survey.html}{run by Google},
+in partnership with Delphi.
 
-One survey is ... CTIS in collaboration with Facebook.
+The other survey, the
+\href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/fb-survey.html}{COVID-19 Trends and Impact Survey},
+was run by Delphi in collaboration with Facebook.
 
 Data is reported for counties that had at least 200 cumulative COVID-19 cases
 on May 14, 2020, according to JHU CSSE.
@@ -44,9 +82,9 @@ The data has columns:
 \item{geo_value}{The 5-digit county FIPS code associated with each
 row of measurements.}
 \item{time_value}{The time value, a date in YYYY-MM-DD format}
-\item{goog}{Seven-day average of CLI (covid-like-illness) cases}
-\item{fb}{Seven-day average of CLI (covid-like-illness) cases}
-\item{case}{Seven-day average of CLI (covid-like-illness) cases}
+\item{goog}{Seven-day average of CLI (covid-like-illness) cases from the Google survey}
+\item{fb}{Seven-day average of CLI (covid-like-illness) cases from CTIS}
+\item{case}{Reference signal. Seven-day average of CLI (covid-like-illness) cases}
 }
 }
 

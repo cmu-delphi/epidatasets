@@ -31,7 +31,7 @@ Suggests:
     purrr,
     readr
 Enhances:
-    epiprocess,
+    epiprocess (>= 0.9.0),
     tibble
 Remotes:
     cmu-delphi/epidatr,

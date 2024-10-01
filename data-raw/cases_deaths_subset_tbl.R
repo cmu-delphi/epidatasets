@@ -53,7 +53,7 @@ confirmed_7dav_incidence_num <- pub_covidcast(
   select(geo_value, time_value, cases_7d_av = value) %>%
   arrange(geo_value, time_value)
 
-cases_deaths_subset_dt <- confirmed_7dav_incidence_prop %>%
+cases_deaths_subset_tbl <- confirmed_7dav_incidence_prop %>%
   full_join(deaths_7dav_incidence_prop,
             by = c("geo_value", "time_value")) %>%
   full_join(confirmed_incidence_num,
@@ -63,8 +63,8 @@ cases_deaths_subset_dt <- confirmed_7dav_incidence_prop %>%
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(cases_deaths_subset_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
+#   usethis::use_data(cases_deaths_subset_tbl, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512
-save_to_sysdata(cases_deaths_subset_dt, "cases_deaths_subset_dt")
+save_to_sysdata(cases_deaths_subset_tbl, "cases_deaths_subset_tbl")

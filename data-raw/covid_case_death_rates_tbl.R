@@ -27,13 +27,13 @@ y <- pub_covidcast(
 ) %>%
   select(geo_value, time_value, death_rate = value)
 
-covid_case_death_rates_dt <- x %>%
+covid_case_death_rates_tbl <- x %>%
   full_join(y, by = c("geo_value", "time_value")) %>%
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(covid_case_death_rates_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
+#   usethis::use_data(covid_case_death_rates_tbl, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512
-save_to_sysdata(covid_case_death_rates_dt, "covid_case_death_rates_dt")
+save_to_sysdata(covid_case_death_rates_tbl, "covid_case_death_rates_tbl")

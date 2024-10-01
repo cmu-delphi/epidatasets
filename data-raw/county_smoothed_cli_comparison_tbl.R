@@ -75,7 +75,7 @@ geo_values_complete <- intersect(
 )
 
 # Join the three data frames together
-county_smoothed_cli_comparison_dt <- full_join(
+county_smoothed_cli_comparison_tbl <- full_join(
   full_join(goog_sm_cli, fb_survey, by = c("geo_value", "time_value")),
   jhu_7dav_incid,
   by = c("geo_value", "time_value")
@@ -84,8 +84,8 @@ county_smoothed_cli_comparison_dt <- full_join(
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(county_smoothed_cli_comparison_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
+#   usethis::use_data(county_smoothed_cli_comparison_tbl, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512
-save_to_sysdata(county_smoothed_cli_comparison_dt, "county_smoothed_cli_comparison_dt")
+save_to_sysdata(county_smoothed_cli_comparison_tbl, "county_smoothed_cli_comparison_tbl")

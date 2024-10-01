@@ -35,15 +35,15 @@ case_rate_subset <- pub_covidcast(
 
 # Use `epiprocess::epix_merge` to avoid having to reimplement `sync`ing
 # behavior. After merging, convert DT component back to tibble.
-archive_cases_dv_subset_all_states_dt = epix_merge(
+archive_cases_dv_subset_all_states_tbl = epix_merge(
   dv_subset, case_rate_subset,
   sync = "locf",
   compactify = TRUE)$DT %>%
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(archive_cases_dv_subset_all_states_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
+#   usethis::use_data(archive_cases_dv_subset_all_states_tbl, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512
-save_to_sysdata(archive_cases_dv_subset_all_states_dt, "archive_cases_dv_subset_all_states_dt")
+save_to_sysdata(archive_cases_dv_subset_all_states_tbl, "archive_cases_dv_subset_all_states_tbl")

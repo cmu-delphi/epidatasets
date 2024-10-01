@@ -1,15 +1,16 @@
+library(dplyr)
 library(epidatr)
 library(epiprocess)
-library(data.table)
-library(dplyr)
+
+source(here::here("data-raw/_helper.R"))
 
 dv_subset <- pub_covidcast(
   source = "doctor-visits",
   signals = "smoothed_adj_cli",
-  geo_type = "state",
   time_type = "day",
-  geo_values = "ca,fl,ny,tx",
+  geo_type = "state",
   time_values = epirange(20200601, 20211201),
+  geo_values = "ca,fl,ny,tx",
   issues = epirange(20200601, 20211201)
 ) %>%
   select(geo_value, time_value, version = issue, percent_cli = value) %>%
@@ -20,24 +21,26 @@ dv_subset <- pub_covidcast(
 case_rate_subset <- pub_covidcast(
   source = "jhu-csse",
   signals = "confirmed_7dav_incidence_prop",
-  geo_type = "state",
   time_type = "day",
-  geo_values = "ca,fl,ny,tx",
+  geo_type = "state",
   time_values = epirange(20200601, 20211201),
+  geo_values = "ca,fl,ny,tx",
   issues = epirange(20200601, 20211201)
 ) %>%
   select(geo_value, time_value, version = issue, case_rate_7d_av = value) %>%
   as_epi_archive(compactify = FALSE)
 
-archive_cases_dv_subset <- epix_merge(
+# Use `epiprocess::epix_merge` to avoid having to reimplement `sync`ing
+# behavior. After merging, convert DT component back to tibble.
+archive_cases_dv_subset_dt = epix_merge(
   dv_subset, case_rate_subset,
   sync = "locf",
-  compactify = FALSE)
+  compactify = FALSE)$DT %>%
+  as_tibble()
 
-# If we directly store an epi_archive R6 object as data, it will store its class
-# implementation there as well. To prevent mismatches between these stored
-# implementations and the latest class definition, don't store them as R6
-# objects; store the DT and construct the R6 object on request.
-archive_cases_dv_subset_dt <- archive_cases_dv_subset$DT
-
-usethis::use_data(archive_cases_dv_subset_dt, overwrite = TRUE, internal = TRUE)
+# We're trying to do:
+#   usethis::use_data(archive_cases_dv_subset_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
+# but `usethis::use_data` can only store multiple objects if they're added in
+# the same call. This workaround is from
+# https://github.com/r-lib/usethis/issues/1512
+save_to_sysdata(archive_cases_dv_subset_dt, "archive_cases_dv_subset_dt")

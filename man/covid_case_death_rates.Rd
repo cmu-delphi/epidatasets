@@ -3,18 +3,9 @@
 \docType{data}
 \name{covid_case_death_rates}
 \alias{covid_case_death_rates}
-\title{Subset of JHU daily state cases and deaths}
+\title{JHU daily COVID-19 cases and deaths rates from all states}
 \format{
-A tibble with 20,496 rows and 4 variables:
-\describe{
-\item{geo_value}{the geographic value associated with each row
-of measurements.}
-\item{time_value}{the time value associated with each row of measurements.}
-\item{case_rate}{7-day average signal of number of new
-confirmed COVID-19 cases per 100,000 population, daily}
-\item{death_rate}{7-day average signal of number of new confirmed
-deaths due to COVID-19 per 100,000 population, daily}
-}
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 37576 rows and 4 columns.
 }
 \source{
 This object contains a modified part of the
@@ -40,10 +31,25 @@ inclusive.
 covid_case_death_rates
 }
 \description{
-This data source of confirmed COVID-19 cases and deaths
-is based on reports made available by the Center for
-Systems Science and Engineering at Johns Hopkins University.
-This example data ranges from Dec 31, 2020 to Dec 31, 2021,
-and includes all states.
+This data source of confirmed COVID-19 cases and deaths is based on reports
+made available by the Center for Systems Science and Engineering at Johns
+Hopkins University, as downloaded from the CMU Delphi COVIDcast Epidata
+API. This example data is a snapshot as of March 20, 2024, and
+ranges from December 31, 2020 to December 31, 2021. It
+includes all states. It is used in the {epiprocess} correlation vignette.
 }
+\section{Data dictionary}{
+
+The data has columns:
+\describe{
+\item{geo_value}{the geographic value associated with each row
+of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{case_rate}{7-day average signal of number of new
+confirmed COVID-19 cases per 100,000 population, daily}
+\item{death_rate}{7-day average signal of number of new confirmed
+deaths due to COVID-19 per 100,000 population, daily}
+}
+}
+
 \keyword{datasets}

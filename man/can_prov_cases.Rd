@@ -5,7 +5,7 @@
 \alias{can_prov_cases}
 \title{Canadian COVID-19 case rates}
 \format{
-An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 65299 rows and 4 columns.
+An \code{\link[epiprocess:epi_archive]{epiprocess::epi_archive}}. The DT attribute contains the data formatted as a \code{\link[data.table:data.table]{data.table::data.table}} (object of class \code{c("data.table", "data.frame")}) with 65299 rows and 4 columns.
 }
 \source{
 This object contains a modified part of the COVID-19 Canada Open
@@ -13,7 +13,22 @@ Data Working Group's
 \href{https://github.com/ccodwg/Covid19Canada}{Covid19Canada data repository} (archived).
 This data set is licensed under the terms of the
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
-by the COVID-19 Canada Open Data Working Group.
+by the COVID-19 Canada Open Data Working Group. The COVID-19 Canada Open
+Data Working Group collected the data from publicly available sources such
+as government datasets and news releases.
+
+Modifications:
+\itemize{
+\item The case rate signal are calculated using the case count taken directly from the CCODWG
+\href{https://github.com/ccodwg/Covid19Canada}{ccodwg/Covid19Canada GitHub repository}
+and population data.
+\item Furthermore, the data has been limited to a very small number of rows, the
+signal names slightly altered, some province names replaced with abbreviations, and
+formatted into an \code{epi_archive}.
+}
+
+The population data used (but not included in the dataset itself) is from the
+\href{https://github.com/mountainMath/BCCovidSnippets/}{mountainMath/BCCovidSnippets GitHub repository}.
 }
 \usage{
 can_prov_cases
@@ -30,7 +45,19 @@ and the newer
 which also reports vaccine-related signals.
 }
 \details{
-This dataset contains versioned data covering the period from April 2020 to
-December 2021 and is used in the epipredict slide vignette.
+This dataset contains versioned data snapshots from February 1, 2021 to December
+1, 2021 covering the period from April 2, 2020 to December 1, 2021. It is
+used in the epipredict slide vignette.
 }
+\section{Data dictionary}{
+
+The data in the \code{epi_archive$DT} attribute has columns:
+\describe{
+\item{version}{the time value specifying the version for each row of measurements.}
+\item{geo_value}{the province or territory associated with each row of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{case_rate}{number of new confirmed cases due to COVID-19 per 100,000 population, daily}
+}
+}
+
 \keyword{datasets}

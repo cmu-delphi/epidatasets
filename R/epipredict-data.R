@@ -84,7 +84,7 @@
 #'       of measurements.}
 #'   \item{time_value}{the time value associated with each row of measurements.}
 #'   \item{masking}{Estimated percentage of people who wore a mask for most or all of the time while in public in the past 7 days; those not in public in the past 7 days are not counted.}
-#'   \item{distancting}{Estimated percentage of respondents who reported that all or most people they enountered in public in the past 7 days maintained a distance of at least 6 feet. Respondents who said that they have not been in public for the past 7 days are excluded.}
+#'   \item{distancing}{Estimated percentage of respondents who reported that all or most people they encountered in public in the past 7 days maintained a distance of at least 6 feet. Respondents who said that they have not been in public for the past 7 days are excluded.}
 #' }
 #'
 #' @source
@@ -183,7 +183,7 @@
 #'   signal names slightly altered, some province names replaced with abbreviations, and
 #'   formatted into an `epi_archive`.
 #'
-#' The populatin data used (but not included in the dataset itself) is from the
+#' The population data used (but not included in the dataset itself) is from the
 #' \href{https://github.com/mountainMath/BCCovidSnippets/}{mountainMath/BCCovidSnippets GitHub repository}.
 "can_prov_cases"
 
@@ -213,18 +213,17 @@
 #'  Table 37-10-0115-01 Characteristics and median employment income of
 #'  longitudinal cohorts of postsecondary graduates two and five years after
 #'  graduation, by educational qualification and field of study
-#'  (primary groupings)
-#' }. This does not constitute an endorsement by Statistics Canada of this product.
+#'  (primary groupings)}. This does not constitute an endorsement by Statistics Canada of this product.
 #'
 #' The data is licensed under the terms of the
 #' \href{https://www.statcan.gc.ca/en/reference/licence}{Statistics Canada Open License}.
 #'
 #' Modifications:
-#' * Only provincial and territorial regions are kept
-#' * Only age group and educational qualification are kept as
+#' * Only provincial and territorial regions are kept.
+#' * Only age group, field of study, and educational qualification are kept as
 #'   covariates. For the remaining covariates, we keep aggregated values and
 #'   drop the level-specific rows.
-#' * No modifications were made to the time range of the data
+#' * No modifications were made to the time range of the data.
 "grad_employ_subset"
 
 #' Percent CLI from different surveys, compared to ground truth COVID incidence in a subset of counties

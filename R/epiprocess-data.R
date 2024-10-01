@@ -77,8 +77,8 @@
 #'   signal names slightly altered, and formatted into an `epi_archive`.
 #'
 #' This object contains a modified part of the
-#' \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{Delphi `doctor-visits` indicator}
-#' . This data source is computed by the Delphi
+#' \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{Delphi `doctor-visits` indicator}.
+#' This data source is computed by the Delphi
 #' Group from information about outpatient visits, provided to Delphi by
 #' health system partners, and published in the COVIDcast Epidata API. This
 #' data set is licensed under the terms of the

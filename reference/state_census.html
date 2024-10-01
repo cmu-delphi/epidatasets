@@ -42,12 +42,28 @@
 
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
-    <p>Data frame with 57 rows (including one for the United States as a
-whole, plus the District of Columbia, Puerto Rico Commonwealth,
-American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana,
-Islands).</p>
+    <p>A <code><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble::tibble</a></code> (object of class <code>c("tbl_df", "tbl", "data.frame")</code>) with 57 rows and 4 columns.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
+    <p>This object is derived from several datasets from the United States
+Census Bureau, Population Division, at
+<a href="https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf" class="external-link">https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf</a>,
+<a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html" class="external-link">https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html</a>,
+and <a href="https://www.census.gov/data/tables/2010/dec/2010-island-areas.html" class="external-link">https://www.census.gov/data/tables/2010/dec/2010-island-areas.html</a>.
+It is made available through the <code>covidcast</code> package. This data is
+public domain.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="data-dictionary">Data dictionary<a class="anchor" aria-label="anchor" href="#data-dictionary"></a></h2>
+
+
+<p>The data includes 57 regions (all US states, the United
+States as a whole, the District of Columbia, Puerto Rico Commonwealth,
+American Samoa, Guam, the U.S. Virgin Islands, and the Northern Mariana
+Islands) with columns:</p>
 <dl><dt>fips</dt>
-<dd><p>FIPS code</p></dd>
+<dd><p>2-digit FIPS code</p></dd>
 
 <dt>name</dt>
 <dd><p>Full name of the state or territory</p></dd>
@@ -61,24 +77,17 @@ Islands).</p>
 
 
 </dl></div>
-    <div class="section level2">
-    <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p>United States Census Bureau, at
-<a href="https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf" class="external-link">https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.pdf</a>,
-<a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html" class="external-link">https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-puerto-rico-municipios.html</a>,
-and <a href="https://www.census.gov/data/tables/2010/dec/2010-island-areas.html" class="external-link">https://www.census.gov/data/tables/2010/dec/2010-island-areas.html</a></p>
-    </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Daniel J. McDonald.</p>
+  <p>Developed by Daniel J. McDonald, Nat DeFries.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>

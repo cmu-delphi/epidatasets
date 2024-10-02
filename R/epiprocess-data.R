@@ -6,7 +6,7 @@
 #' ranges from March 1, 2020 to December 31, 2021. It is limited to California,
 #' Florida, Texas, New York, Georgia, and Pennsylvania.
 #'
-#' It is used in the {epiprocess} growth rate and `epi_slide` vignettes.
+#' It is used in the {epiprocess} growth rate, correlation, `epi_slide` vignettes.
 #'
 #' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 4026 rows and 6 columns.
 #' @section Data dictionary:

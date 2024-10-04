@@ -47,25 +47,16 @@ case_death_rate_archive_tbl <- epix_merge(
 # Calculate 7-day averages for case and death rates.
 case_death_rate_archive_tbl <- case_death_rate_archive_tbl %>%
   epix_slide(
-    before = 365000L, ref_time_values = fc_time_values,
+    .before = 365000L, .versions = fc_time_values,
     function(x, gk, rtv) {
       x %>%
         group_by(geo_value) %>%
-        epi_slide_mean(case_rate, before = 6L) %>%
+        epi_slide_mean(case_rate, .align = "right", .window_size = 7L) %>%
         rename(case_rate_7d_av = slide_value_case_rate) %>%
-        epi_slide_mean(death_rate, before = 6L) %>%
+        epi_slide_mean(death_rate, .align = "right", .window_size = 7L) %>%
         ungroup() %>%
         rename(death_rate_7d_av = slide_value_death_rate)
     }
-  ) %>%
-  rename(
-    version = time_value,
-    time_value = slide_value_time_value,
-    geo_value = slide_value_geo_value,
-    case_rate = slide_value_case_rate,
-    death_rate = slide_value_death_rate,
-    case_rate_7d_av = slide_value_case_rate_7d_av,
-    death_rate_7d_av = slide_value_death_rate_7d_av
   ) %>%
   as_epi_archive(compactify = TRUE)
 # Convert DT component back to tibble.

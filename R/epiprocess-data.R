@@ -207,7 +207,7 @@
 #'   These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes.
 #' * Furthermore, the data has been limited to a very small number of rows,
 #'   formatted into an `epi_df`, and the signal names slightly altered.
-"jhu_confirmed_cumulative_num"
+"covid_confirmed_cumulative_num"
 
 #' JHU daily COVID-19 cases and deaths rates from all states
 #'

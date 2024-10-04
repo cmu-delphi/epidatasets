@@ -5,7 +5,7 @@
 \alias{grad_employ_subset}
 \title{Subset of Statistics Canada median employment income for postsecondary graduates}
 \format{
-An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 10193 rows and 8 columns.
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 1445 rows and 7 columns.
 }
 \source{
 This object contains modified data adapted from
@@ -45,7 +45,6 @@ The data has columns:
 row of measurements.}
 \item{time_value}{The time value, a year integer in YYYY format}
 \item{edu_qual}{The education qualification}
-\item{fos}{The field of study}
 \item{age_group}{The age group; either 15 to 34 or 35 to 64}
 \item{num_graduates}{The number of graduates for the given row of characteristics}
 \item{med_income_2y}{The median employment income two years after graduation}

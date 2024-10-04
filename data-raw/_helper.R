@@ -19,6 +19,8 @@ save_to_sysdata <- function(obj, obj_name) {
     list = names(sysdata_env),
     file = internal_data_path,
     envir = sysdata_env,
-    compress = "xz"
+    compress = "xz",
+    # For backwards compatibility with older R versions (<3.5)
+    version = 2
   )
 }

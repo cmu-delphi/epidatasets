@@ -3,11 +3,11 @@
 #' This data source of confirmed COVID-19 cases and deaths is based on reports
 #' made available by the Center for Systems Science and Engineering at Johns
 #' Hopkins University, as downloaded from the CMU Delphi COVIDcast Epidata
-#' API. This example data is a snapshot as of March 20, 2024, and
+#' API. This example data is a snapshot as of May 31, 2022, and
 #' ranges from December 31, 2020 to December 31, 2021. It
-#' includes all states. It is used in the {epiprocess} correlation vignette.
+#' includes all states.
 #'
-#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 37576 rows and 4 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 20496 rows and 4 columns.
 #' @section Data dictionary:
 #' The data has columns:
 #' \describe{
@@ -76,7 +76,7 @@
 #' ranges from June 4, 2021 to December 31, 2021.
 #' It is limited to California, Florida, Texas, New Jersey, and New York.
 #'
-#' @format A [`tibble::tibble`] (object of class `c("tbl_df", "tbl", "data.frame")`) with 1055 rows and 4 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 1055 rows and 4 columns.
 #' @section Data dictionary:
 #' The data has columns:
 #' \describe{
@@ -195,7 +195,7 @@
 #' www.statcan.gc.ca. This example data is a snapshot as of September 18,
 #' 2024, and ranges from 2010 to 2017 (yearly).
 #'
-#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 10193 rows and 8 columns.
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 1445 rows and 7 columns.
 #' @section Data dictionary:
 #' The data has columns:
 #' \describe{
@@ -203,7 +203,6 @@
 #'      row of measurements.}
 #'   \item{time_value}{The time value, a year integer in YYYY format}
 #'   \item{edu_qual}{The education qualification}
-#'   \item{fos}{The field of study}
 #'   \item{age_group}{The age group; either 15 to 34 or 35 to 64}
 #'   \item{num_graduates}{The number of graduates for the given row of characteristics}
 #'   \item{med_income_2y}{The median employment income two years after graduation}
@@ -226,3 +225,146 @@
 #'   drop the level-specific rows.
 #' * No modifications were made to the time range of the data.
 "grad_employ_subset"
+
+#' Percent CLI from different surveys, compared to ground truth COVID incidence in a subset of counties
+#'
+#' @description
+#' Data set for more than 400 US counties containing CLI
+#' (COVID-19-like-illness) incidence derived from two surveys, and a reference signal as
+#' reported by JHU CSSE. This example data is a snapshot as of September 21,
+#' 2020, and ranges from April 11, 2020 to September 01, 2020.
+#'
+#' The reference signal `case` is based on reports made available
+#' by the Center for Systems Science and Engineering at Johns Hopkins
+#' University.
+#'
+#' One survey was
+#' \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/google-survey.html}{run by Google},
+#' in partnership with Delphi.
+#'
+#' The other survey, the
+#'\href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/fb-survey.html}{COVID-19 Trends and Impact Survey},
+#' was run by Delphi in collaboration with Facebook.
+#'
+#' Data is reported for counties that had at least 200 cumulative COVID-19 cases
+#' on May 14, 2020, according to JHU CSSE.
+#'
+#' @format An [`epiprocess::epi_df`] (object of class `c("epi_df", "tbl_df", "tbl", "data.frame")`) with 63840 rows and 5 columns.
+#' @section Data dictionary:
+#' The data has columns:
+#' \describe{
+#'   \item{geo_value}{The 5-digit county FIPS code associated with each
+#'      row of measurements.}
+#'   \item{time_value}{The time value, a date in YYYY-MM-DD format}
+#'   \item{goog}{Seven-day average of CLI (covid-like-illness) cases from the Google survey}
+#'   \item{fb}{Seven-day average of CLI (covid-like-illness) cases from CTIS}
+#'   \item{case}{Reference signal. Seven-day average of CLI (covid-like-illness) cases}
+#' }
+#' @source
+#' This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+#' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+#' by Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
+#' Copyright Johns Hopkins University 2020.
+#'
+#' Modifications:
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:  The signal `confirmed_cumulative_num` was used to determine eligibility for inclusion. The signal `confirmed_7dav_incidence_prop` was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+#' * Furthermore, the data has been limited to a specific time range, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
+#'
+#' This object contains a modified part of the
+#' \href{https://cmu-delphi.github.io/delphi-epidata/symptom-survey/#covid-19-trends-and-impact-survey}{data
+#' aggregations in the API} that are prepared from the
+#' \href{https://www.pnas.org/doi/full/10.1073/pnas.2111454118}{COVID-19
+#' Trends and Impact Survey}; see the first link for more information on
+#' citing in publications.
+#' The data is made available via the
+#' \href{https://cmu-delphi.github.io/delphi-epidata/}{Delphi Epidata API}.
+#'
+#' These aggregations are licensed under the terms of
+#' the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+#' Attribution license}.
+#'
+#' Modifications:
+#' * The data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
+#'
+#' This object contains a modified part of the
+#' \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/google-survey.html}{Google symptom surveys}.
+#' Aggregations based on the survey are licensed under the terms of
+#' the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons
+#' Attribution license}.
+#'
+#' Modifications:
+#' * The data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_df`.
+"county_smoothed_cli_comparison"
+
+#' Daily COVID-19 case and death rates from all states in archive format
+#'
+#' @description
+#' Data set containing COVID-19 case and death rates (counts per 100000
+#' population) as reported by the Delphi API, based on reports made available
+#' by the Center for Systems Science and Engineering at Johns Hopkins
+#' University. This example data ranges from March 1, 2020 to November 30,
+#' 2021, issued monthly on the first day of each month from September 1, 2020
+#' to December 1, 2021. It includes all US states, Washington DC, Guam, Puerto
+#' Rico, and the Virgin Islands.
+#'
+#' @format An [`epiprocess::epi_archive`]. The DT attribute contains the data formatted as a [`data.table::data.table`] (object of class `c("data.table", "data.frame")`) with 72086 rows and 7 columns.
+#' @section Data dictionary:
+#' The data in the `epi_archive$DT` attribute has columns:
+#' \describe{
+#'   \item{geo_value}{the geographic value associated with each row of measurements.}
+#'   \item{time_value}{the time value associated with each row of measurements.}
+#'   \item{version}{the time value specifying the version for each row of measurements. }
+#'   \item{case_rate}{Number of new confirmed cases due to COVID-19 per 100,000 population, daily}
+#'   \item{case_rate_7d_av}{7-day average signal of number of new confirmed cases due to COVID-19 per 100,000 population, daily}
+#'   \item{death_rate}{Number of new confirmed deaths due to COVID-19 per 100,000 population, daily}
+#'   \item{death_rate_7d_av}{7-day average signal of number of new confirmed deaths due to COVID-19 per 100,000 population, daily}
+#' }
+#' @source
+#' This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+#' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+#' by Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
+#' Copyright Johns Hopkins University 2020.
+#'
+#' Modifications:
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:  The signals `case_rate` and `death_rate` are taken directly from the JHU CSSE GitHub repo without changes, served through the Delphi API.
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: Averaged signals were computed from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+#' * Furthermore, the data has been limited to a specific time range, the
+#'   signal names slightly altered, and formatted into an `epi_archive`.
+"case_death_rate_archive"
+
+#' Daily COVID-19 doctor visits and cases from all states in archive format
+#' @description
+#' This data source is based on information about outpatient visits, provided
+#' to us by health system partners, and also contains confirmed COVID-19
+#' cases based on reports made available by the Center for Systems Science
+#' and Engineering at Johns Hopkins University. This example data ranges from
+#' June 1, 2020 to December 1, 2021, issued on dates from June 1, 2020 to December 1,
+#' 2021. It includes all US states.
+#'
+#' It is used in the {epipredict} `sliding` article.
+#'
+#' @format An [`epiprocess::epi_archive`]. The DT attribute contains the data formatted as a [`data.table::data.table`] (object of class `c("data.table", "data.frame")`) with 1514489 rows and 5 columns.
+#' @section Data dictionary:
+#' The data in the `epi_archive$DT` attribute has columns:
+#' \describe{
+#'   \item{geo_value}{the geographic value associated with each row of measurements.}
+#'   \item{time_value}{the time value associated with each row of measurements.}
+#'   \item{version}{the time value specifying the version for each row of measurements. }
+#'   \item{percent_cli}{percentage of doctor’s visits with CLI (COVID-like illness) computed from medical insurance claims}
+#'   \item{case_rate}{7-day average signal of number of new confirmed cases due to COVID-19 per 100,000 population, daily}
+#' }
+#' @source
+#' This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+#' \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+#' by Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
+#' Copyright Johns Hopkins University 2020.
+#'
+#' Modifications:
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/doctor-visits.html}{From the COVIDcast Doctor Visits API}: The signal `percent_cli` is taken directly from the API without changes.
+#' * \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}: `case_rate` signal was computed by Delphi from the original JHU-CSSE data by calculating moving averages of the preceding 7 days, so the signal for June 7 is the average of the underlying data for June 1 through 7, inclusive.
+#' * Furthermore, the data has been limited to a very small number of rows, the
+#'   signal names slightly altered, and formatted into an `epi_archive`.
+"archive_cases_dv_subset_all_states"

@@ -38,6 +38,9 @@ API. This example data is a snapshot as of May 31, 2022, and
 ranges from March 1, 2020 to December 31, 2021. It
 includes all states.
 }
+\details{
+It is used in the {epiprocess} correlation vignettes.
+}
 \section{Data dictionary}{
 
 The data has columns:

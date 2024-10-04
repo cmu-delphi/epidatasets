@@ -10,7 +10,7 @@ for (file in files) {
     # File is a helper script and does not generate data.
     next
   }
-  path <- here(file)
+  path <- here(file.path("data-raw", file))
   message("running ", path, " ...")
   source(path)
 }

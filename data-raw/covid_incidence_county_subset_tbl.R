@@ -1,13 +1,18 @@
 library(dplyr)
-library(covidcast)
 library(epidatr)
 
 source(here::here("data-raw/_helper.R"))
 
 d <- as.Date("2024-03-20")
 
-# Use covidcast::county_census to get the county and state names
-y <- covidcast::county_census %>%
+# Previously, we were using `covidcast::county_census`, but covidcast is large and complicated to install (due to `sf` dependency). Instead, read the file directly from GitHub.
+y <- read_csv("https://github.com/cmu-delphi/covidcast/raw/c89e4d295550ba1540d64d2cc991badf63ad04e5/Python-packages/covidcast-py/covidcast/geo_mappings/county_census.csv", # nolint: line_length_linter
+  col_types = cols(
+    FIPS = col_character(),
+    STNAME = col_character(),
+    CTYNAME = col_character()
+  )
+) %>%
   filter(STNAME %in% c("Massachusetts", "Vermont"), STNAME != CTYNAME) %>%
   select(geo_value = FIPS, county_name = CTYNAME, state_name = STNAME)
 
@@ -22,7 +27,7 @@ covid_incidence_county_subset_tbl <- pub_covidcast(
   as_of = d
 ) %>%
   select(geo_value, time_value, cases = value) %>%
-  full_join(y, by = "geo_value") %>%
+  inner_join(y, by = "geo_value", relationship = "many-to-one", unmatched = c("error", "drop")) %>%
   as_tibble()
 
 # We're trying to do:

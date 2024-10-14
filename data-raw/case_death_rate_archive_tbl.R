@@ -47,7 +47,7 @@ case_death_rate_archive_tbl <- epix_merge(
 # Calculate 7-day averages for case and death rates.
 case_death_rate_archive_tbl <- case_death_rate_archive_tbl %>%
   epix_slide(
-    .before = 365000L, .versions = fc_time_values,
+    .before = Inf, .versions = fc_time_values,
     function(x, gk, rtv) {
       x %>%
         group_by(geo_value) %>%

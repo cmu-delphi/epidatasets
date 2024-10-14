@@ -1,4 +1,4 @@
-## code to prepare `can_prov_cases_dt` dataset goes here
+## code to prepare `can_prov_cases_tbl` dataset goes here
 
 library(dplyr)
 library(readr)
@@ -108,7 +108,7 @@ ca_pop <- read_csv(
 abbrev_map <- setNames(ca_pop$province, ca_pop$abbreviation)
 
 # Read in data
-can_prov_cases_dt <- purrr::map2(commit_pages$data_url, commit_pages$date, function(url, date) {
+can_prov_cases_tbl <- purrr::map2(commit_pages$data_url, commit_pages$date, function(url, date) {
   raw <- readr::read_csv(
     url,
     col_types = cols(
@@ -140,15 +140,15 @@ can_prov_cases_dt <- purrr::map2(commit_pages$data_url, commit_pages$date, funct
   return(result)
 })
 
-names(can_prov_cases_dt) <- commit_pages$date
-can_prov_cases_dt <- can_prov_cases_dt %>% bind_rows(.id = "version") %>%
+names(can_prov_cases_tbl) <- commit_pages$date
+can_prov_cases_tbl <- can_prov_cases_tbl %>% bind_rows(.id = "version") %>%
   mutate(version = lubridate::ymd(version)) %>% 
   arrange(version) %>%
   as_tibble()
 
 # We're trying to do:
-#   usethis::use_data(can_prov_cases_dt, internal = TRUE, overwrite = TRUE, compress = "xz")
+#   usethis::use_data(can_prov_cases_tbl, internal = TRUE, overwrite = TRUE, compress = "xz")
 # but `usethis::use_data` can only store multiple objects if they're added in
 # the same call. This workaround is from
 # https://github.com/r-lib/usethis/issues/1512
-save_to_sysdata(can_prov_cases_dt, "can_prov_cases_dt")
+save_to_sysdata(can_prov_cases_tbl, "can_prov_cases_tbl")

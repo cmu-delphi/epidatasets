@@ -8,6 +8,12 @@ template:
     link-color: '#C41230'
     navbar-bg: '#C41230'
     navbar-fg: '#f8f8f8'
+repo:
+  url:
+    home: https://github.com/cmu-delphi/epidatasets/tree/main/
+    source: https://github.com/cmu-delphi/epidatasets/blob/main/
+    issue: https://github.com/cmu-delphi/epidatasets/issues
+    user: https://github.com/
 navbar:
   bg: '#C41230'
   fg: '#f8f8f8'

@@ -17,8 +17,8 @@ Delphi Epidata API, and deposit some examples here for easy offline use.
 You can install the development version of `{epidatasets}` like so:
 
 ``` r
-# install.packages("remotes")
-remotes::install_github("cmu-delphi/epidatasets")
+# install.packages("pak")
+pak::pkg_install("cmu-delphi/epidatasets")
 ```
 
 ## Contents

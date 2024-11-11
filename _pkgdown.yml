@@ -1,24 +1,26 @@
 url: https://cmu-delphi.github.io/epidatasets/
-template:
-  bootstrap: 5
-  bootswatch: cosmo
-  bslib:
-    font_scale: 1.0
-    primary: '#C41230'
-    link-color: '#C41230'
-    navbar-bg: '#C41230'
-    navbar-fg: '#f8f8f8'
-navbar:
-  bg: '#C41230'
-  fg: '#f8f8f8'
-home:
-  links:
-  - text: The epiprocess R package
-    href: https://cmu-delphi.github.io/epiprocess/
-  - text: The epipredict R package
-    href: https://cmu-delphi.github.io/epipredict/
-  - text: The covidcast R package
-    href: https://cmu-delphi.github.io/covidcast/covidcastR/
-  - text: The epidatr R package
-    href: https://github.com/cmu-delphi/epidatr/
 
+template:
+  package: delphidocs
+
+repo:
+  url:
+    home: https://github.com/cmu-delphi/epidatasets/
+    source: https://github.com/cmu-delphi/epidatasets/
+    issue: https://github.com/cmu-delphi/epidatasets/issues
+
+home:
+  sidebar:
+    structure: [links, license, community, citation, authors, dev, related]
+    components:
+      related:
+        title: Delphi packages and resources
+        text: |
+          * [The epidatr package](https://github.com/cmu-delphi/epidatr/)
+          * [The epiprocess package](https://cmu-delphi.github.io/epiprocess/)
+          * [The epipredict package](https://cmu-delphi.github.io/epipredict)
+          * [Introduction to Delphi's Tooling Work](https://cmu-delphi.github.io/delphi-tooling-book/)
+
+reference:
+- title: Included data
+- contents: has_keyword("datasets")

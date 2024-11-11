@@ -3,50 +3,59 @@
 \docType{data}
 \name{cases_deaths_subset}
 \alias{cases_deaths_subset}
-\title{Subset of JHU daily state cases and deaths}
+\title{Subset of JHU daily state COVID-19 cases and deaths from 6 states}
 \format{
-A tibble with 4026 rows and 6 variables:
-\describe{
-  \item{geo_value}{the geographic value associated with each row
-      of measurements.}
-  \item{time_value}{the time value associated with each row of measurements.}
-  \item{case_rate_7d_av}{7-day average signal of number of new
-      confirmed COVID-19 cases per 100,000 population, daily}
-  \item{death_rate_7d_av}{7-day average signal of number of new confirmed
-      deaths due to COVID-19 per 100,000 population, daily}
-  \item{cases}{Number of new confirmed COVID-19 cases, daily}
-  \item{cases_7d_av}{7-day average signal of number of new confirmed
-      COVID-19 cases, daily}
-}
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 4026 rows and 6 columns.
 }
 \source{
 This object contains a modified part of the
-  \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University}
-  as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}.
-  This data set is licensed under the terms of the
-  \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
-  by the Johns Hopkins University on behalf of its Center for Systems Science
-  in Engineering. Copyright Johns Hopkins University 2020.
+\href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University}
+as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}.
+This data set is licensed under the terms of the
+\href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
+by the Johns Hopkins University on behalf of its Center for Systems Science
+in Engineering. Copyright Johns Hopkins University 2020.
 
 Modifications:
-* \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
-  These signals are taken directly from the JHU CSSE
-  \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository}
-  without changes. The 7-day average signals are computed by Delphi by
-  calculating moving averages of the preceding 7 days, so the signal for
-  June 7 is the average of the underlying data for June 1 through 7,
-  inclusive.
-* Furthermore, the data has been limited to a very small number of rows,
-  the signal names slightly altered, and formatted into a tibble.
+\itemize{
+\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
+The case signal is taken directly from the JHU CSSE
+\href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository}.
+The rate signals were computed by Delphi using Census population data.
+The 7-day average signals were computed by Delphi by calculating moving
+averages of the preceding 7 days, so the signal for June 7 is the
+average of the underlying data for June 1 through 7, inclusive.
+\item Furthermore, the data has been limited to a very small number of rows, the
+signal names slightly altered, and formatted into an \code{epi_df}.
+}
 }
 \usage{
 cases_deaths_subset
 }
 \description{
-This data source of confirmed COVID-19 cases and deaths
-is based on reports made available by the Center for
-Systems Science and Engineering at Johns Hopkins University.
-This example data ranges from Mar 1, 2020 to Dec 31, 2021, and is limited to
-California, Florida, Texas, New York, Georgia, and Pennsylvania.
+This data source of confirmed COVID-19 cases and deaths is based on reports
+made available by the Center for Systems Science and Engineering at Johns
+Hopkins University. This example data is a snapshot as of March 20, 2024, and
+ranges from March 1, 2020 to December 31, 2021. It is limited to California,
+Florida, Texas, New York, Georgia, and Pennsylvania.
+
+It is used in the {epiprocess} growth rate and \code{epi_slide} vignettes.
 }
+\section{Data dictionary}{
+
+The data has columns:
+\describe{
+\item{geo_value}{the geographic value associated with each row
+of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{case_rate_7d_av}{7-day average signal of number of new
+confirmed COVID-19 cases per 100,000 population, daily}
+\item{death_rate_7d_av}{7-day average signal of number of new confirmed
+deaths due to COVID-19 per 100,000 population, daily}
+\item{cases}{Number of new confirmed COVID-19 cases, daily}
+\item{cases_7d_av}{7-day average signal of number of new confirmed
+COVID-19 cases, daily}
+}
+}
+
 \keyword{datasets}

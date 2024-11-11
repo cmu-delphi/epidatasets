@@ -3,49 +3,48 @@
 \docType{data}
 \name{covid_incidence_outliers}
 \alias{covid_incidence_outliers}
-\title{Subset of JHU daily cases from California and Florida}
+\title{Subset of JHU daily COVID-19 cases from New Jersey and Florida}
 \format{
-A tibble with 730 rows and 3 variables:
-\describe{
-  \item{geo_value}{the geographic value associated with each row of measurements.}
-  \item{time_value}{the time value associated with each row of measurements.}
-  \item{cases}{Number of new confirmed COVID-19 cases, daily}
-}
-
-An object of class \code{epi_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 730 rows and 3 columns.
+An \code{\link[epiprocess:epi_df]{epiprocess::epi_df}} (object of class \code{c("epi_df", "tbl_df", "tbl", "data.frame")}) with 730 rows and 3 columns.
 }
 \source{
-This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
+This object contains a modified part of the
+\href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University}
+as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}.
+This data set is licensed under the terms of the
 \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
-by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
-Copyright Johns Hopkins University 2020.
+by the Johns Hopkins University on behalf of its Center for Systems
+Science in Engineering. Copyright Johns Hopkins University 2020.
 
 Modifications:
-* \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
+\itemize{
+\item \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{From the COVIDcast Epidata API}:
 These signals are taken directly from the JHU CSSE \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 GitHub repository} without changes.
-* Furthermore, the data has been limited to a very small number of rows, the signal names slightly altered, and formatted into a tibble.
-
-This object contains a modified part of the \href{https://github.com/CSSEGISandData/COVID-19}{COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University} as \href{https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/jhu-csse.html}{republished in the COVIDcast Epidata API}. This data set is licensed under the terms of the
-\href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}
-by the Johns Hopkins University on behalf of its Center for Systems Science in Engineering.
-Copyright Johns Hopkins University 2020.
+\item Furthermore, the data has been limited to a very small number of rows,
+formatted into an \code{epi_df}, and the signal names slightly altered.
+}
 }
 \usage{
 covid_incidence_outliers
-
-covid_incidence_outliers
 }
 \description{
-This data source of confirmed COVID-19 cases
-is based on reports made available by the Center for
-Systems Science and Engineering at Johns Hopkins University.
-This example data is a snapshot as of Oct 28, 2021 and captures the cases
-from June 1, 2020 to May 31, 2021
-and is limited to California and Florida.
+This data source of confirmed COVID-19 cases is based on reports made
+available by the Center for Systems Science and Engineering at Johns
+Hopkins University. This example data is downloaded from the CMU Delphi
+COVIDcast Epidata API. It is a snapshot as of October 28, 2021, and captures the
+cases from June 1, 2020 to May 31, 2021. It is limited to New Jersey and
+Florida.
 
-Data set for 2 states containing COVID-19 Incident Cases as reported
-by JHU-CSSE and Downloaded from the CMU Delphi COVIDcast Epidata API.
-This data set covers the period from June 2020 to May 2021, and is
-used in the [epiprocess] Vignette on Outliers.
+This data set is used in the {epiprocess} vignette on outliers.
 }
+\section{Data dictionary}{
+
+The data has columns:
+\describe{
+\item{geo_value}{the geographic value associated with each row of measurements.}
+\item{time_value}{the time value associated with each row of measurements.}
+\item{cases}{Number of new confirmed COVID-19 cases, daily}
+}
+}
+
 \keyword{datasets}

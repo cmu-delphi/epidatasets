@@ -3,12 +3,6 @@ url: https://cmu-delphi.github.io/epidatasets/
 template:
   package: delphidocs
 
-repo:
-  url:
-    home: https://github.com/cmu-delphi/epidatasets/
-    source: https://github.com/cmu-delphi/epidatasets/
-    issue: https://github.com/cmu-delphi/epidatasets/issues
-
 home:
   sidebar:
     structure: [links, license, community, citation, authors, dev, related]

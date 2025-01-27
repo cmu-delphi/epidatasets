@@ -3,7 +3,7 @@ library(epidatr)
 
 source(here::here("data-raw/_helper.R"))
 
-d <- as.Date("2022-05-31")
+d <- as.Date("2025-01-27")
 
 x <- pub_covidcast(
   source = "jhu-csse",

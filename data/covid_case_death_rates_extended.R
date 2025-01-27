@@ -1,6 +1,6 @@
 delayedAssign("covid_case_death_rates_extended", local({
   if (requireNamespace("epiprocess", quietly = TRUE)) {
-    d <- as.Date("2022-05-31")
+    d <- as.Date("2023-03-10")
     epiprocess::as_epi_df(
       dplyr::bind_rows(
         epidatasets:::covid_case_death_rates_extension_tbl,

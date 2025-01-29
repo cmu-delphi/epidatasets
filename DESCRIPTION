@@ -1,7 +1,7 @@
 Type: Package
 Package: epidatasets
 Title: Epidemiological Data for Delphi Tooling Examples
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
     person(c("Daniel", "J."), "McDonald", , "daniel@stat.ubc.ca", role = "aut"),
     person("Nat", "DeFries", , "ndefries@andrew.cmu.edu", role = c("cre", "aut")),

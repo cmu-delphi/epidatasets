@@ -5,7 +5,9 @@ source(here::here("data-raw/_helper.R"))
 
 d <- as.Date("2024-03-20")
 
-# Previously, we were using `covidcast::county_census`, but covidcast is large and complicated to install (due to `sf` dependency). Instead, read the file directly from GitHub.
+# Previously, we were using `covidcast::county_census`, but covidcast is large
+# and complicated to install (due to `sf` dependency). Instead, read the file
+# directly from GitHub.
 y <- read_csv("https://github.com/cmu-delphi/covidcast/raw/c89e4d295550ba1540d64d2cc991badf63ad04e5/Python-packages/covidcast-py/covidcast/geo_mappings/county_census.csv", # nolint: line_length_linter
   col_types = cols(
     FIPS = col_character(),
